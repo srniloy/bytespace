@@ -1,8 +1,5 @@
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import heroGrid from '../assets/hero-section-grid.png';
-import logo from '../assets/nav-logo.png';
-import cartIcon from '../assets/cart-icon.png';
 
 export interface NavLinkItem {
     label: string;
@@ -54,11 +51,11 @@ export default function MobileMenu({
             />
 
             <aside
-                style={{ backgroundImage: `url(${heroGrid})` }}
+                style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.png)' }}
                 className={`absolute left-0 top-0 flex h-full w-[86%] max-w-sm flex-col border-r border-white/15 bg-persian-blue shadow-custom transition-transform duration-300 ${open ? 'translate-x-0' : '-translate-x-full'}`}
             >
                 <header className="flex h-30 shrink-0 items-center justify-between border-b border-white/15 px-6">
-                    <img src={logo} alt="ByteSpace" className="w-37.5" />
+                    <img src="/images/nav-logo.png" alt="ByteSpace" className="w-37.5" />
                     <button
                         type="button"
                         onClick={onClose}
@@ -107,7 +104,7 @@ export default function MobileMenu({
                         className={`flex w-full items-center justify-between rounded-full border border-white/20 px-5 py-3 label-l text-blue-100 transition-colors duration-200 hover:border-white/40 hover:text-white ${focusRing}`}
                     >
                         <span>Cart</span>
-                        <img src={cartIcon} alt="" className="h-5 w-5" />
+                        <img src="/icons/cart-icon.png" alt="" className="h-5 w-5" />
                     </button>
 
                     {authLinks.map((link) => {

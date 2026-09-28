@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/nav-logo.png';
-import cartIcon from '../assets/cart-icon.png';
 import MobileMenu, { type NavLinkItem } from './mobile-menu';
 
 const centerLinks: NavLinkItem[] = [
@@ -33,7 +31,7 @@ export default function Navbar() {
             <nav className="relative z-40 flex h-30 w-full items-center justify-between px-8 font-sans text-white sm:px-16 lg:px-24 2xl:px-36">
 
                 <NavLink to="/" aria-label="ByteSpace home" className="w-[160px] cursor-pointer">
-                    <img src={logo} alt="ByteSpace" />
+                    <img src="/images/nav-logo.png" alt="ByteSpace" />
                 </NavLink>
 
                 <div className="hidden items-center gap-8 body-m text-blue-100 md:flex">
@@ -61,7 +59,7 @@ export default function Navbar() {
                     </div>
 
                     <button type="button" aria-label="Cart" className={`flex cursor-pointer h-10 w-10 items-center justify-center rounded-lg transition-colors duration-200 hover:text-white ${focusRing}`}>
-                        <img src={cartIcon} alt="" className="h-6 w-6" />
+                        <img src="/icons/cart-icon.png" alt="" className="h-6 w-6" />
                     </button>
 
                     <button
