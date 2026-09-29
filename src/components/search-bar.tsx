@@ -12,8 +12,8 @@ interface SearchBarProps {
 }
 
 const WRAPPER_CLASSES: Record<SearchVariant, string> = {
-    hero: "justify-center max-w-2xl mx-auto mb-16 relative z-20",
-    footer: "mb-4",
+    hero: "justify-center max-w-2xl mx-auto mb-16 relative z-20 gap-3",
+    footer: "mb-8 gap-6",
 };
 
 const BUTTON_CLASSES: Record<SearchVariant, string> = {
@@ -38,7 +38,7 @@ export default function SearchBar({
 
     return (
         <form
-            className={`flex flex-col sm:flex-row items-start w-full gap-3 ${WRAPPER_CLASSES[variant]} ${className}`}
+            className={`flex flex-col sm:flex-row items-start w-full ${WRAPPER_CLASSES[variant]} ${className}`}
             onSubmit={(e) => e.preventDefault()}
         >
             {isHero ? (
