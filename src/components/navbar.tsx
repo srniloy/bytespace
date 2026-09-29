@@ -1,22 +1,21 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import MobileMenu, { type NavLinkItem } from './mobile-menu';
-
-const centerLinks: NavLinkItem[] = [
-    { label: 'Home', href: '/' },
-    { label: 'Courses', href: '/courses' },
-    { label: 'Creators', href: '/creators' },
-];
-
-const authLinks: NavLinkItem[] = [
-    { label: 'Sign In', href: '#' },
-    { label: 'Join Us', href: '#', variant: 'primary' },
-];
+import { authLinks, centerLinks } from '../data/nav';
+import MobileMenu from './mobile-menu';
 
 const focusRing = 'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white';
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    // persian blue only once the page starts scrolling, transparent otherwise
+    useEffect(() => {
+        const onScroll = () => setScrolled(window.scrollY > 16);
+        onScroll();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     // close the drawer when the viewport grows to desktop size
     useEffect(() => {
@@ -28,9 +27,14 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="relative z-40 flex h-30 w-full items-center justify-between px-8 font-sans text-white sm:px-16 lg:px-24 2xl:px-36">
+            <nav className={`fixed inset-x-0 top-0 z-50 flex h-30 w-full items-center justify-between px-8 text-white transition duration-300 sm:px-16 lg:px-24 2xl:px-36 ${scrolled ? 'bg-persian-blue shadow-custom' : 'bg-transparent'}`}>
 
-                <NavLink to="/" aria-label="ByteSpace home" className="w-[160px] cursor-pointer">
+                <span
+                    aria-hidden="true"
+                    className={`absolute bottom-0 left-0 h-0.5 w-full origin-left bg-accent-lime transition-transform duration-500 ease-out ${scrolled ? 'scale-x-100' : 'scale-x-0'}`}
+                />
+
+                <NavLink to="/" aria-label="ByteSpace home" className="w-40 cursor-pointer">
                     <img src="/images/nav-logo.png" alt="ByteSpace" />
                 </NavLink>
 
@@ -52,9 +56,9 @@ export default function Navbar() {
                 <div className="flex items-center gap-4 label-m text-blue-100 sm:gap-6">
                     <div className="hidden items-center gap-6 md:flex">
                         {authLinks.map((link) => (
-                            <a key={link.label} href={link.href} className="transition-colors duration-200 hover:text-white">
+                            <NavLink key={link.label} to={link.href} className="transition-colors duration-200 hover:text-white">
                                 {link.label}
-                            </a>
+                            </NavLink>
                         ))}
                     </div>
 

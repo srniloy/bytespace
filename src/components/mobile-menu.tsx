@@ -1,11 +1,6 @@
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-
-export interface NavLinkItem {
-    label: string;
-    href: string;
-    variant?: 'primary';
-}
+import type { NavLinkItem } from '../data/nav';
 
 const focusRing = 'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white';
 
@@ -110,9 +105,9 @@ export default function MobileMenu({
                     {authLinks.map((link) => {
                         const primary = link.variant === 'primary';
                         return (
-                            <a
+                            <NavLink
                                 key={link.label}
-                                href={link.href}
+                                to={link.href}
                                 onClick={onClose}
                                 className={`block text-center label-l transition-colors duration-200 ${focusRing} ${primary
                                     ? 'rounded-full bg-white py-3.5 text-persian-blue hover:bg-accent-lime'
@@ -120,7 +115,7 @@ export default function MobileMenu({
                                     }`}
                             >
                                 {link.label}
-                            </a>
+                            </NavLink>
                         );
                     })}
                 </div>

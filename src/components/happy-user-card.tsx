@@ -1,7 +1,7 @@
 
 export default function HappyUserCard() {
     return (
-        <div className="hidden sm:block absolute bottom-[14%] -left-2 md:left-20 bg-white rounded-2xl p-4 shadow-xl z-50 w-44 md:w-52">
+        <div className="hidden sm:block absolute bottom-[14%] -left-2 md:left-20 bg-white rounded-2xl p-4 shadow-xl z-20 w-44 md:w-52">
             <h3 className="font-bold text-gray-800 text-sm md:text-base label-m">Happy Students</h3>
             <div className="flex items-center gap-1 mt-1 mb-3">
                 <span className="text-[10px] md:text-xs text-black body-xs">4.5 <span className='text-gray-500'>(240)</span></span>
