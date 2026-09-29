@@ -27,7 +27,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className={`fixed inset-x-0 top-0 z-50 flex h-30 w-full items-center justify-between px-8 text-white transition duration-300 sm:px-16 lg:px-24 2xl:px-36 ${scrolled ? 'bg-persian-blue shadow-custom' : 'bg-transparent'}`}>
+            <nav className={`fixed inset-x-0 top-0 z-50 flex w-full items-center justify-between px-8 text-white transition-all duration-300 sm:px-16 lg:px-24 2xl:px-36 ${scrolled ? 'h-20 bg-persian-blue shadow-custom' : 'h-30 bg-transparent'}`}>
 
                 <span
                     aria-hidden="true"

@@ -1,5 +1,6 @@
-import HappyUserCard from "./happy-user-card";
-import SearchBar from "./search-bar";
+import HappyUserCard from "../happy-user-card";
+import LearningProgressCard from "../learning-progress-card";
+import SearchBar from "../search-bar";
 
 export default function HeroSection() {
     return (
@@ -48,14 +49,7 @@ export default function HeroSection() {
                     </div>
 
                     {/* Card 2: Learning Progress (Top Right) */}
-                    <div className="hidden sm:block absolute top-[30%] right-0 sm:right-4 md:right-[25%] bg-white text-black rounded-2xl p-4 shadow-xl z-20 w-36 md:w-44">
-                        <h3 className="font-medium text-xs md:text-sm label-s">Learning Progress</h3>
-                        <p className="font-bold text-2xl md:text-3xl mt-1 mb-2 heading-m">55%</p>
-                        {/* Progress Bar */}
-                        <div className="w-full bg-gray-200 rounded-full h-1.5">
-                            <div className="bg-accent-lime h-1.5 rounded-full" style={{ width: '55%' }}></div>
-                        </div>
-                    </div>
+                    <LearningProgressCard />
 
                     {/* Card 3: Happy Students (Bottom Left) */}
                     <HappyUserCard />
