@@ -1,17 +1,14 @@
 import HappyUserCard from '../components/happy-user-card'
-import Navbar from '../components/navbar'
+import TrustedBy from '../components/trusted-by'
 
 export default function LandingPage() {
     return (
         <>
             <section
                 style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.png)' }}
-                className=" min-h-screen bg-persian-blue bg-cover bg-center bg-no-repeat flex flex-col relative overflow-hidden font-sans"
+                className="min-h-screen bg-persian-blue bg-cover flex flex-col relative overflow-hidden font-sans"
             >
-                <Navbar />
-
-                {/* Main Content Container */}
-                <div className="flex-1 flex flex-col items-center pt-20 px-4 w-full max-w-7xl mx-auto relative z-10">
+                <div className="flex-1 flex flex-col items-center pt-50 px-4 w-full max-w-7xl mx-auto relative z-10">
 
                     {/* --- HERO TEXT SECTION --- */}
                     <div className="text-center max-w-4xl mx-auto mb-10">
@@ -26,14 +23,11 @@ export default function LandingPage() {
                     {/* --- SEARCH BAR SECTION --- */}
                     <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-2xl mx-auto mb-16 relative z-20 gap-3">
 
-                        {/* White Input Container */}
                         <div className="flex items-center flex-1 bg-white rounded-full py-3 px-6 shadow-sm h-14">
-                            {/* Search Icon */}
                             <div className="flex items-center justify-center text-gray-400 mr-3">
                                 <img src="/icons/search-icon.png" className="h-7 w-7 opacity-70" alt="Search" />
                             </div>
 
-                            {/* Input Field */}
                             <input
                                 type="text"
                                 placeholder="Course, topic, creator"
@@ -41,7 +35,6 @@ export default function LandingPage() {
                             />
                         </div>
 
-                        {/* Search Button (Outside the white container) */}
                         <button className="bg-[#CCFF00] hover:bg-[#b3e600] text-black label-l font-semibold py-4 px-8 cursor-pointer rounded-full transition-colors duration-200 flex-shrink-0">
                             Search
                         </button>
@@ -63,7 +56,6 @@ export default function LandingPage() {
                             src="/images/hero-section-boy.png"
                             alt="Student learning"
                             className="relative z-10"
-                        /* Note: In a real project, use a transparent PNG of the person instead of clip-path */
                         />
 
                         {/* --- FLOATING CARDS --- */}
@@ -98,6 +90,8 @@ export default function LandingPage() {
                 <img className='hidden xl:block absolute right-15 bottom-0 max-[1550px]:w-70 z-10' src="/layout-designs/hero-spiral-bg-5.png" alt="layout styles" />
                 <img className='hidden xl:block absolute left-40 max-[1550px]:w-80 max-[1550px]:left-0 bottom-0 z-10' src="/layout-designs/hero-spiral-bg-6.png" alt="layout styles" />
             </section>
+
+            <TrustedBy />
         </>
     )
 }
