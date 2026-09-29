@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import AvatarStack from './avatar-stack';
-import type { Course } from '../data/courses';
+import { courseCardLabels, type Course } from '../data/courses';
 
 export interface CourseCardProps {
     course: Course;
@@ -20,7 +20,11 @@ export default function CourseCard({ course }: CourseCardProps) {
         avatars,
         extraStudents,
     } = course;
-    const pills = [`${lessonCount} Lessons`, duration, `${commentCount} Comments`];
+    const pills = [
+        `${lessonCount}${courseCardLabels.lessonsSuffix}`,
+        duration,
+        commentCount && `${commentCount}${courseCardLabels.commentsSuffix}`,
+    ];
 
     return (
         <motion.div
@@ -29,7 +33,7 @@ export default function CourseCard({ course }: CourseCardProps) {
             className="w-full bg-white rounded-3xl p-3 border border-gray-100 shadow-sm flex flex-col font-sans cursor-pointer group h-full"
         >
             {/* --- 1. IMAGE & OVERLAY PILLS --- */}
-            <div className="relative w-full aspect-[16/10] rounded-2xl overflow-hidden mb-4 shrink-0">
+            <div className="relative w-full aspect-16/10 rounded-2xl overflow-hidden mb-4 shrink-0">
                 <img
                     src={imageSrc}
                     alt={title}
@@ -51,7 +55,7 @@ export default function CourseCard({ course }: CourseCardProps) {
                         {title}
                     </h3>
                     <p className="body-xs text-gray-500">
-                        by <span className="text-[#0033FF] hover:underline">{creator}</span>
+                        {courseCardLabels.creatorPrefix} <span className="text-[#0033FF] hover:underline">{creator}</span>
                     </p>
                 </div>
 
@@ -64,11 +68,11 @@ export default function CourseCard({ course }: CourseCardProps) {
             <div className="px-1 flex items-center gap-4 mt-4 mb-5">
 
                 <div className="flex items-center gap-1.5 bg-[#F4F5F6] text-gray-700 px-4 py-1.5 rounded-full shrink-0">
-                    <img src="/icons/signal-icon.png" className='w-6 h-6' alt="signal" />
+                    <img src={courseCardLabels.levelIcon.src} className='w-6 h-6' alt={courseCardLabels.levelIcon.alt} />
                     <span className=' label-xs'>{level}</span>
                 </div>
 
-                <AvatarStack avatars={avatars} badge={`${extraStudents}+`} />
+                <AvatarStack avatars={avatars} badge={`${extraStudents}${courseCardLabels.studentsSuffix}`} />
 
             </div>
 
@@ -78,7 +82,7 @@ export default function CourseCard({ course }: CourseCardProps) {
                     ${price}
                 </span>
                 <span className=" text-gray-600 body-xs ml-0.5">
-                    /lifetime
+                    {courseCardLabels.priceSuffix}
                 </span>
             </div>
         </motion.div>

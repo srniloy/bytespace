@@ -1,3 +1,5 @@
+import type { Course } from "./courses";
+
 export interface StatItem {
     value: string;
     label: string;
@@ -8,12 +10,20 @@ export interface GrowthSectionData {
         heading: string;
         description: string;
         stats: StatItem[];
+        image: {
+            src: string;
+            alt: string;
+        };
     };
     creators: {
         heading: string;
         brand: string;
         description: string;
         features: string[];
+        image: {
+            src: string;
+            alt: string;
+        };
     };
     revenueCard: {
         title: string;
@@ -40,6 +50,10 @@ export const growthSectionData: GrowthSectionData = {
             { value: '70+', label: 'Courses' },
             { value: '16', label: 'Creators' },
         ],
+        image: {
+            src: '/images/hero-section-boy.png',
+            alt: 'Student learning',
+        },
     },
     creators: {
         heading: 'Create & Manage Courses Easily.',
@@ -52,6 +66,10 @@ export const growthSectionData: GrowthSectionData = {
             'Flexibility and Autonomy',
             'Build a Community',
         ],
+        image: {
+            src: '/images/growth-section-girl.png',
+            alt: 'Course creator',
+        },
     },
     revenueCard: {
         title: 'Total Revenue',
@@ -67,3 +85,17 @@ export const growthSectionData: GrowthSectionData = {
     },
     learningProgress: 55,
 };
+
+
+export const singleCourse: Course = {
+    imageSrc: '/images/course-card-thumbnail-1.jpg',
+    lessonCount: 17,
+    duration: '2 hours 16 mins',
+    title: 'Learn Figma from Basic',
+    creator: 'purepearl studio',
+    rating: 4.5,
+    level: 'Beginner',
+    price: 25,
+    avatars: ['/images/user-image-1.png', '/images/user-image-2.png', '/images/user-image-3.png'],
+    extraStudents: 26,
+}

@@ -25,8 +25,8 @@ export default function Footer() {
                         <SearchBar
                             variant="footer"
                             type="email"
-                            placeholder="Enter your email"
-                            buttonLabel="Search"
+                            placeholder={newsletter.searchPlaceholder}
+                            buttonLabel={newsletter.searchButtonLabel}
                             required
                         />
 

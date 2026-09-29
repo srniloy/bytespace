@@ -5,8 +5,8 @@ type SearchVariant = "hero" | "footer";
 interface SearchBarProps {
     variant?: SearchVariant;
     type?: string;
-    placeholder?: string;
-    buttonLabel?: string;
+    placeholder: string;
+    buttonLabel: string;
     required?: boolean;
     className?: string;
 }
@@ -29,8 +29,8 @@ const BUTTON_SIZE: Record<SearchVariant, "lg" | "md"> = {
 export default function SearchBar({
     variant = "hero",
     type = "text",
-    placeholder = "Course, topic, creator",
-    buttonLabel = "Search",
+    placeholder,
+    buttonLabel,
     required,
     className = "",
 }: SearchBarProps) {

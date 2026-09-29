@@ -8,7 +8,7 @@ export interface Course {
     imageSrc: string;
     lessonCount: number;
     duration: string;
-    commentCount: number;
+    commentCount?: number;
     title: string;
     creator: string;
     rating: number;
@@ -29,6 +29,30 @@ export const courseSectionContent: CourseSectionContent = {
     description:
         'At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.',
     showMoreLabel: '+ More',
+};
+
+export interface CourseCardLabels {
+    lessonsSuffix: string;
+    commentsSuffix: string;
+    creatorPrefix: string;
+    studentsSuffix: string;
+    priceSuffix: string;
+    levelIcon: {
+        src: string;
+        alt: string;
+    };
+}
+
+export const courseCardLabels: CourseCardLabels = {
+    lessonsSuffix: ' Lessons',
+    commentsSuffix: ' Comments',
+    creatorPrefix: 'by',
+    studentsSuffix: '+',
+    priceSuffix: '/lifetime',
+    levelIcon: {
+        src: '/icons/signal-icon.png',
+        alt: 'signal',
+    },
 };
 
 export const courseCategories: CourseCategory[] = [
