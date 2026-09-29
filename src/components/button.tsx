@@ -31,7 +31,7 @@ export default function Button({
     return (
         <button
             type={type}
-            className={`inline-flex items-center justify-center font-semibold rounded-full transition-colors duration-200 flex-shrink-0 cursor-pointer ${VARIANT_CLASSES[variant]} ${SIZE_CLASSES[size]} ${className}`}
+            className={`inline-flex items-center justify-center font-medium rounded-full transition-colors duration-200 shrink-0 cursor-pointer ${VARIANT_CLASSES[variant]} ${SIZE_CLASSES[size]} ${className}`}
             {...rest}
         >
             {children}

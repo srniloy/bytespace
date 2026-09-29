@@ -3,7 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/main-layout';
 import AuthLayout from './layouts/auth-layout';
 
-const LandingPage = lazy(() => import('./pages/landing-page'));
+const HomePage = lazy(() => import('./pages/home-page'));
 const CoursePage = lazy(() => import('./pages/course-page'));
 const CreatorPage = lazy(() => import('./pages/creator-page'));
 const LoginPage = lazy(() => import('./pages/login-page'));
@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/courses" element={<CoursePage />} />
           <Route path="/creators" element={<CreatorPage />} />
         </Route>

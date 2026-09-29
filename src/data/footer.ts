@@ -18,6 +18,8 @@ export interface FooterData {
     newsletter: {
         text: string;
         disclaimer: string;
+        searchPlaceholder: string;
+        searchButtonLabel: string;
     };
     linkColumns: FooterLinkColumn[];
     legalLinks: FooterLink[];
@@ -37,6 +39,8 @@ export const footerData: FooterData = {
     newsletter: {
         text: 'Stay Up to date with our latest features and releases by joining our newsletter.',
         disclaimer: 'By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.',
+        searchPlaceholder: 'Enter your email',
+        searchButtonLabel: 'Search',
     },
     linkColumns: [
         {
