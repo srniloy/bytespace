@@ -39,7 +39,7 @@ export default memo(function CourseCard({ course }: CourseCardProps) {
             <Link
                 to={`/courses/${course.id}`}
                 aria-label={title}
-                className="absolute inset-0 z-0 rounded-3xl cursor-pointer"
+                className="absolute inset-0 z-[1] rounded-3xl cursor-pointer"
             />
 
             {/* --- 1. IMAGE & OVERLAY PILLS --- */}
@@ -52,7 +52,7 @@ export default memo(function CourseCard({ course }: CourseCardProps) {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
-                <div className="absolute bottom-3 left-3 flex flex-wrap gap-2 pr-3">
+                <div className="absolute bottom-3 left-3 flex flex-wrap gap-2 pr-3 pointer-events-none">
                     {pills.map((pill) => (
                         <span key={pill} className='bg-white/70 backdrop-blur-xs label-xs text-gray-800 px-3 py-1.5 rounded-full'>
                             {pill}

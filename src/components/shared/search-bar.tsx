@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "./button";
 
 type SearchVariant = "hero" | "footer";
@@ -10,6 +11,8 @@ interface SearchBarProps {
     showChevron?: boolean;
     required?: boolean;
     className?: string;
+    defaultValue?: string;
+    onSearch?: (query: string) => void;
 }
 
 const WRAPPER_CLASSES: Record<SearchVariant, string> = {
@@ -45,11 +48,18 @@ export default function SearchBar({
     showChevron = false,
     required,
     className = "",
+    defaultValue = "",
+    onSearch,
 }: SearchBarProps) {
+    const [query, setQuery] = useState(defaultValue);
+
     return (
         <form
             className={`flex flex-col sm:flex-row items-start w-full ${WRAPPER_CLASSES[variant]} ${className}`}
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={(e) => {
+                e.preventDefault();
+                onSearch?.(query);
+            }}
         >
             {variant === "footer" ? (
                 <input
@@ -57,6 +67,8 @@ export default function SearchBar({
                     placeholder={placeholder}
                     required={required}
                     aria-label={buttonLabel}
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
                     className={INPUT_CLASSES.footer}
                 />
             ) : (
@@ -70,6 +82,8 @@ export default function SearchBar({
                         placeholder={placeholder}
                         required={required}
                         aria-label={buttonLabel}
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
                         className={INPUT_CLASSES[variant]}
                     />
                 </div>
