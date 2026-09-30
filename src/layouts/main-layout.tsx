@@ -12,7 +12,7 @@ export default function MainLayout() {
             <Navbar />
 
             {/* hero pages manage their own top spacing; other pages clear the fixed navbar */}
-            <main className={`flex-1 ${pathname === '/' || pathname.startsWith('/courses') ? '' : 'pt-30'}`}>
+            <main className={`flex-1 ${pathname === '/' || pathname.startsWith('/courses') || pathname.startsWith('/creators') ? '' : 'pt-30'}`}>
                 <Suspense fallback={<PageLoader />}>
                     <Outlet />
                 </Suspense>
