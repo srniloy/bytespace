@@ -15,7 +15,7 @@ export default function Footer() {
 
                         <div className="flex items-center gap-2 mb-6">
                             <NavLink to={logo.href} aria-label={logo.ariaLabel} className="w-40 cursor-pointer">
-                                <img src={logo.src} alt={logo.alt} />
+                                <img src={logo.src} alt={logo.alt} width={342} height={74} className="h-auto w-full" />
                             </NavLink>
                         </div>
                         <p className="text-gray-600 body-s mb-12">

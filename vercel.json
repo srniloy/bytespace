@@ -16,7 +16,7 @@
             ]
         },
         {
-            "source": "/(images|icons|layout-designs)/(.*)",
+            "source": "/(images|icons|layout-designs|fonts)/(.*)",
             "headers": [
                 {
                     "key": "Cache-Control",

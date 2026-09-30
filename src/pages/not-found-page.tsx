@@ -12,7 +12,7 @@ export default function NotFoundPage() {
         >
             <div className="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-8 text-center">
 
-                <img src="/images/404.webp" alt="404" className="mx-auto w-full max-w-4xl" />
+                <img src="/images/404.webp" alt="404" width={896} height={357} className="mx-auto h-auto w-full max-w-4xl" />
 
                 <h1 className="mx-auto -mt-4 heading-l text-white">
                     The page you are looking <br className="hidden sm:block" />for doesn&apos;t exist

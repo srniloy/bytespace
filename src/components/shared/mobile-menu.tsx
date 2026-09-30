@@ -53,7 +53,7 @@ export default function MobileMenu({
                 className={`absolute left-0 top-0 flex h-full w-[86%] max-w-sm flex-col border-r border-white/15 bg-persian-blue shadow-custom transition-transform duration-300 ${open ? 'translate-x-0' : '-translate-x-full'}`}
             >
                 <header className="flex h-30 shrink-0 items-center justify-between border-b border-white/15 px-6">
-                    <img src={logo.src} alt={logo.alt} className="w-37.5" />
+                    <img src={logo.src} alt={logo.alt} width={342} height={74} className="h-auto w-37.5" />
                     <button
                         type="button"
                         onClick={onClose}
