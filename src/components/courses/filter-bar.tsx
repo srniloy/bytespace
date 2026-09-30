@@ -3,7 +3,7 @@ import { coursesPageData } from '../../data/courses-page';
 
 const { filters, categories } = coursesPageData;
 
-const PILL_CLASSES = 'flex h-12 cursor-pointer items-center gap-2 rounded-full border border-gray-200 bg-white px-4 body-s text-gray-700 transition-colors duration-200 hover:bg-gray-50';
+const PILL_CLASSES = 'flex h-12 cursor-pointer items-center gap-2 rounded-full border border-gray-200 bg-white px-4 body-s font-medium text-gray-700 transition-colors duration-200 hover:bg-gray-50';
 const ACTIVE_CHIP_CLASSES = 'bg-[#CCFF00] text-black';
 const IDLE_CHIP_CLASSES = 'bg-[#F4F5F6] text-[#5C636E] hover:bg-[#EAEBED] hover:text-black';
 
@@ -36,7 +36,7 @@ const sortIcon = (
     </svg>
 );
 
-export default function FilterBar() {
+export default function FilterBar({ showCategories = true }: { showCategories?: boolean }) {
     const [activeCategory, setActiveCategory] = useState(categories[0].id);
 
     return (
@@ -59,19 +59,21 @@ export default function FilterBar() {
             </div>
 
             {/* --- CATEGORY CHIPS --- */}
-            <div className="mt-9 flex flex-wrap gap-6">
-                {categories.map((category) => (
-                    <button
-                        key={category.id}
-                        type="button"
-                        onClick={() => setActiveCategory(category.id)}
-                        className={`cursor-pointer rounded-full px-4 py-3.5 label-s transition-colors duration-200 ${activeCategory === category.id ? ACTIVE_CHIP_CLASSES : IDLE_CHIP_CLASSES
-                            }`}
-                    >
-                        {category.label}
-                    </button>
-                ))}
-            </div>
+            {showCategories && (
+                <div className="mt-9 flex flex-wrap gap-6">
+                    {categories.map((category) => (
+                        <button
+                            key={category.id}
+                            type="button"
+                            onClick={() => setActiveCategory(category.id)}
+                            className={`cursor-pointer rounded-full px-4 py-3.5 label-s transition-colors duration-200 ${activeCategory === category.id ? ACTIVE_CHIP_CLASSES : IDLE_CHIP_CLASSES
+                                }`}
+                        >
+                            {category.label}
+                        </button>
+                    ))}
+                </div>
+            )}
         </div>
     );
 }

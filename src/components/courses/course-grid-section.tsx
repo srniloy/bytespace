@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import CourseCard from "../course-card";
+import CourseCard from "./course-card";
 import CoursePagination from "./course-pagination";
 import FilterBar from "./filter-bar";
 import { homeCourses } from "../../data/courses";

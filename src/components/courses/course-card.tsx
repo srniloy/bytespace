@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import AvatarStack from './avatar-stack';
-import { courseCardLabels, type Course } from '../data/courses';
+import AvatarStack from '../avatar-stack';
+import { courseCardLabels, type Course } from '../../data/courses';
+import { getCreatorLink } from '../../data/creator-page';
 
 export interface CourseCardProps {
     course: Course;
@@ -28,12 +29,18 @@ export default function CourseCard({ course }: CourseCardProps) {
     ];
 
     return (
-        <Link to={`/courses/${course.id}`} className="block h-full cursor-pointer group">
-            <motion.div
-                whileHover={{ y: -4, boxShadow: '0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
-                transition={{ duration: 0.2, ease: 'easeOut' }}
-                className="w-full bg-white rounded-3xl p-3 border border-gray-100 shadow-sm flex flex-col font-sans h-full"
-            >
+        <motion.div
+            whileHover={{ y: -4, boxShadow: '0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
+            transition={{ duration: 0.2, ease: 'easeOut' }}
+            className="group relative w-full bg-white rounded-3xl p-3 border border-gray-100 shadow-sm flex flex-col font-sans h-full"
+        >
+            {/* stretched link covers the card; the creator byline sits above it */}
+            <Link
+                to={`/courses/${course.id}`}
+                aria-label={title}
+                className="absolute inset-0 z-0 rounded-3xl cursor-pointer"
+            />
+
             {/* --- 1. IMAGE & OVERLAY PILLS --- */}
             <div className="relative w-full aspect-16/10 rounded-2xl overflow-hidden mb-4 shrink-0">
                 <img
@@ -57,13 +64,19 @@ export default function CourseCard({ course }: CourseCardProps) {
                         {title}
                     </h3>
                     <p className="body-xs text-gray-500">
-                        {courseCardLabels.creatorPrefix} <span className="text-[#0033FF] hover:underline">{creator}</span>
+                        {courseCardLabels.creatorPrefix}{' '}
+                        <Link
+                            to={getCreatorLink(creator)}
+                            className="relative z-10 text-[#0033FF] hover:underline"
+                        >
+                            {creator}
+                        </Link>
                     </p>
                 </div>
 
                 <div className="flex items-center gap-1 mt-1 shrink-0">
-                    <span className="body-l text-gray-700">{rating}</span>
-                    <span className="text-gray-300 text-xl leading-0">★</span>
+                    <span className="body-l text-gray-700 leading-4 mt-0.5">{rating}</span>
+                    <span className="text-gray-300 text-xl leading-4">★</span>
                 </div>
             </div>
 
@@ -88,6 +101,5 @@ export default function CourseCard({ course }: CourseCardProps) {
                 </span>
             </div>
         </motion.div>
-        </Link>
     );
 }
