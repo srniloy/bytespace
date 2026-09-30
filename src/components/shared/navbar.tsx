@@ -39,7 +39,7 @@ export default function Navbar() {
 
                 <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-4 md:px-8">
                     <NavLink to={logo.href} aria-label={logo.ariaLabel} className="w-40 cursor-pointer">
-                        <img src={logo.src} alt={logo.alt} />
+                        <img src={logo.src} alt={logo.alt} width={342} height={74} className="h-auto w-full" />
                     </NavLink>
 
                     <div className="hidden items-center gap-8 body-m text-blue-100 md:flex">

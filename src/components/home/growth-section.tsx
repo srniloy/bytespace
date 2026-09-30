@@ -64,6 +64,10 @@ export default function GrowthSection() {
                         <img
                             src={growth.image.src}
                             alt={growth.image.alt}
+                            loading="lazy"
+                            decoding="async"
+                            width={676}
+                            height={515}
                             className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-130"
                         />
 
@@ -72,7 +76,7 @@ export default function GrowthSection() {
                             progress={learningProgress}
                             positionClassName="hidden sm:block absolute right-5 top-[46%] z-30 w-44 md:w-52"
                         />
-                        <img className='hidden sm:block absolute top-30 z-30 -right-5 w-40' src="/layout-designs/growth-spiral-1.webp" alt="" />
+                        <img aria-hidden="true" className='hidden sm:block absolute top-30 z-30 -right-5 w-40' src="/layout-designs/growth-spiral-1.webp" alt="" loading="lazy" decoding="async" />
 
                     </div>
                 </div>
@@ -106,10 +110,14 @@ export default function GrowthSection() {
                         <img
                             src={creators.image.src}
                             alt={creators.image.alt}
+                            loading="lazy"
+                            decoding="async"
+                            width={496}
+                            height={719}
                             className="absolute bottom-0 left-1/2 z-30 w-[80%] max-w-135 -translate-x-1/2"
                         />
 
-                        <img className='hidden sm:block absolute top-10 z-30 right-10 w-40' src="/layout-designs/growth-spiral-2.webp" alt="" />
+                        <img aria-hidden="true" className='hidden sm:block absolute top-10 z-30 right-10 w-40' src="/layout-designs/growth-spiral-2.webp" alt="" loading="lazy" decoding="async" />
 
 
                         <HappyUserCard positionClassName="hidden sm:block absolute bottom-45 right-0 z-40 w-52 md:w-60" />
