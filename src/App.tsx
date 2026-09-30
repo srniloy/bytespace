@@ -1,5 +1,5 @@
 import { lazy } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/main-layout';
 import AuthLayout from './layouts/auth-layout';
 import ScrollToTop from './components/scroll-to-top';
@@ -11,6 +11,7 @@ const CreatorPage = lazy(() => import('./pages/creator-page'));
 const CreatorsPage = lazy(() => import('./pages/creators-page'));
 const LoginPage = lazy(() => import('./pages/login-page'));
 const RegisterPage = lazy(() => import('./pages/register-page'));
+const NotFoundPage = lazy(() => import('./pages/not-found-page'));
 
 function App() {
   return (
@@ -21,16 +22,18 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/courses" element={<CoursePage />} />
           <Route path="/courses/:id" element={<CourseDetailsPage />} />
-            <Route path="/creators" element={<CreatorsPage />} />
-            <Route path="/creators/:id" element={<CreatorPage />} />
+          <Route path="/creators" element={<CreatorsPage />} />
+          <Route path="/creators/:id" element={<CreatorPage />} />
+        </Route>
+
+        <Route element={<MainLayout hero />}>
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
 
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/sign-up" element={<RegisterPage />} />
         </Route>
-
-        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
   );

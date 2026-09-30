@@ -17,8 +17,11 @@ const ButterflyLogo = () => (
 
 
 
+import usePageTitle from '../hooks/use-page-title';
+
 // --- Component ---
 export default function RegisterPage() {
+    usePageTitle('Sign Up');
     return (
         <div className="min-h-screen w-full flex flex-col lg:flex-row bg-white font-sans">
 
