@@ -21,15 +21,15 @@ export default function CreatorHero({ creator }: CreatorHeroProps) {
             <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8">
 
                 {/* --- AVATAR + NAME ROW --- */}
-                <div className="flex items-center gap-5">
+                <div className="flex flex-col sm:flex-row items-center gap-5">
                     <img
                         src={creator.avatar.src}
                         alt={creator.avatar.alt}
                         className="size-26 shrink-0 rounded-3xl object-cover"
                     />
 
-                    <div className="min-w-0">
-                        <div className="flex flex-wrap items-center gap-4">
+                    <div className="min-w-0 flex flex-col items-center sm:items-start">
+                        <div className="flex flex-wrap flex-col sm:flex-row items-center gap-4">
                             <h1 className="heading-s text-white">{creator.name}</h1>
                             <span className="rounded-full bg-accent-lime px-5 py-2 label-m font-semibold text-black">
                                 {creator.badge}
@@ -40,7 +40,7 @@ export default function CreatorHero({ creator }: CreatorHeroProps) {
                 </div>
 
                 {/* --- BIO --- */}
-                <div className="mt-12 space-y-3">
+                <div className="mt-12 space-y-3 text-center sm:text-left">
                     {creator.bio.map((paragraph) => (
                         <p key={paragraph} className="body-l text-white">{paragraph}</p>
                     ))}

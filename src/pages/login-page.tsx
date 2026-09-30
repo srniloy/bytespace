@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import FormField from '../components/form-field';
+import usePageTitle from '../hooks/use-page-title';
 
 
 // Dummy component for now, will update it later with appropiate design and content.
 
 export default function LoginPage() {
+    usePageTitle('Sign In');
     return (
         <div className="w-full max-w-md rounded-3xl bg-white p-8 shadow-custom sm:p-10">
             <h1 className="heading-s text-persian-blue">Welcome back</h1>
