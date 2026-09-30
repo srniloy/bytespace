@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/main-layout';
 import AuthLayout from './layouts/auth-layout';
 import ScrollToTop from './components/scroll-to-top';
+import NotFoundPage from './pages/not-found-page';
 
 const HomePage = lazy(() => import('./pages/home-page'));
 const CoursePage = lazy(() => import('./pages/course-page'));
@@ -11,7 +12,6 @@ const CreatorPage = lazy(() => import('./pages/creator-page'));
 const CreatorsPage = lazy(() => import('./pages/creators-page'));
 const LoginPage = lazy(() => import('./pages/login-page'));
 const RegisterPage = lazy(() => import('./pages/register-page'));
-const NotFoundPage = lazy(() => import('./pages/not-found-page'));
 
 function App() {
   return (

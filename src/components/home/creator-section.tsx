@@ -4,7 +4,7 @@ import { creatorCtaData } from '../../data/creator-section';
 
 const { headingLines, description, button } = creatorCtaData;
 
-interface Shape {
+export interface Shape {
     src: string;
     className: string;
 }

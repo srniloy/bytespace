@@ -23,17 +23,17 @@
 }
 
 @theme {
-  /* Colors (creates bg-main-bg, text-main-bg, border-main-bg, etc.) */
+  /* Colors */
   --color-main-bg: #ffffff;
   --color-text-main: #6b6375;
   --color-social-bg: rgba(244, 243, 236, 0.5);
   --color-persian-blue: #003be2;
   --color-accent-lime: #d4fb20;
 
-  /* Shadows (creates shadow-custom) */
+  /* Shadows */
   --shadow-custom: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
-  /* Fonts (creates font-sans, font-heading, etc.) */
+  /* Fonts  */
   --font-poppins: 'Poppins', sans-serif;
   --font-satoshi: 'Satoshi', sans-serif;
   --font-clash-display: 'Clash Display', sans-serif;

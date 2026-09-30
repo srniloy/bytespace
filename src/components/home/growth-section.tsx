@@ -31,7 +31,7 @@ export default function GrowthSection() {
 
             <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col gap-24 px-4 md:gap-32 md:px-8">
 
-                {/* --- ROW 1 --- */}
+                {/* --- row 1 --- */}
                 <div className="flex flex-col lg:flex-row items-center gap-12">
 
                     <div className="max-w-xl text-center lg:text-left">
@@ -54,7 +54,6 @@ export default function GrowthSection() {
                         </div>
                     </div>
 
-                    {/* Visual */}
                     <div className="relative mx-auto min-h-70 min-[450px]:min-h-82.5  w-full max-w-130 sm:min-h-117.5">
 
 
@@ -78,10 +77,9 @@ export default function GrowthSection() {
                     </div>
                 </div>
 
-                {/* --- ROW 2 --- */}
+                {/* --- row 2 --- */}
                 <div className="flex items-center flex-col-reverse lg:flex-row gap-20 lg:gap-16">
 
-                    {/* Visual */}
                     <div className="relative mx-auto min-h-105 min-[450px]:min-h-130 w-full max-w-120 sm:min-h-130">
 
 

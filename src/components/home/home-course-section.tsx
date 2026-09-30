@@ -22,7 +22,6 @@ export default function CourseSection() {
 
             <div className="w-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col items-center">
 
-                {/* --- HEADER & FILTERS --- */}
                 <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
                     <h2 className="text-4xl md:text-[44px] heading-m text-black max-w-xl mb-5">
                         {courseSectionContent.heading}
@@ -62,7 +61,6 @@ export default function CourseSection() {
                     </div>
                 </div>
 
-                {/* --- COURSE GRID --- */}
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {visibleCourses.map((course) => (
                         <CourseCard key={course.id} course={course} />

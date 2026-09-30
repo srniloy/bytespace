@@ -34,7 +34,6 @@ export default function CourseCard({ course }: CourseCardProps) {
             transition={{ duration: 0.2, ease: 'easeOut' }}
             className="group relative w-full bg-white rounded-3xl p-3 border border-gray-100 shadow-sm flex flex-col font-sans h-full"
         >
-            {/* stretched link covers the card; the creator byline sits above it */}
             <Link
                 to={`/courses/${course.id}`}
                 aria-label={title}

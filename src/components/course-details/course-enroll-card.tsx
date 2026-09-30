@@ -46,7 +46,6 @@ export default function CourseEnrollCard({ course, className = '' }: CourseEnrol
     return (
         <div className={`relative z-10 rounded-3xl bg-white border border-gray-200 p-8 font-sans shadow-custom ${className}`}>
 
-            {/* --- LESSONS --- */}
             <h2 className="heading-xs text-gray-900">{enroll.lessons.heading}</h2>
 
             <ul className="mt-6 space-y-4">
@@ -62,7 +61,6 @@ export default function CourseEnrollCard({ course, className = '' }: CourseEnrol
             </ul>
             <p className="mt-4 body-s text-gray-400">{enroll.lessons.moreLabel}</p>
 
-            {/* --- ENROLL --- */}
             <p className="mt-4 body-s text-gray-600">{enroll.prompt}</p>
 
             <p className="mt-5">
@@ -72,7 +70,6 @@ export default function CourseEnrollCard({ course, className = '' }: CourseEnrol
 
             <Button variant="lime" className="mt-4 w-full">{enroll.enrollLabel}</Button>
 
-            {/* --- INCLUDES --- */}
             <h3 className="mt-7 font-poppins text-lg font-semibold text-gray-900">{enroll.includesHeading}</h3>
 
             <ul className="mt-5 space-y-5">
@@ -84,7 +81,6 @@ export default function CourseEnrollCard({ course, className = '' }: CourseEnrol
                 ))}
             </ul>
 
-            {/* --- CREATOR --- */}
             <hr className="my-6 border-gray-200" />
 
             <Link to={getCreatorLink(enroll.creator.name)} className="mt-4 flex items-center gap-4 cursor-pointer">

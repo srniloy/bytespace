@@ -12,7 +12,6 @@ export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
-    // persian blue only once the page starts scrolling, transparent otherwise
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 16);
         onScroll();
@@ -20,7 +19,6 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
-    // close the drawer when the viewport grows to desktop size
     useEffect(() => {
         const query = window.matchMedia('(min-width: 768px)');
         const close = () => query.matches && setMenuOpen(false);

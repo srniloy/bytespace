@@ -4,19 +4,20 @@ interface FormFieldProps {
     type: string;
     placeholder?: string;
     autoComplete?: string;
+    required?: boolean;
 }
 
-export default function FormField({ label, name, type, placeholder, autoComplete }: FormFieldProps) {
+export default function FormField({ label, name, type, placeholder, autoComplete, required = true }: FormFieldProps) {
     return (
         <label className="block">
-            <span className="label-s text-text-main">{label}</span>
+            <span className="label-s text-gray-700">{label}</span>
             <input
                 type={type}
                 name={name}
-                required
+                required={required}
                 placeholder={placeholder}
                 autoComplete={autoComplete}
-                className="mt-1.5 w-full rounded-full border border-gray-200 bg-white px-5 py-3 body-m text-gray-800 outline-none transition-colors duration-200 focus:border-persian-blue"
+                className="mt-2 w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 body-l text-gray-800 placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-persian-blue focus:ring-1 focus:ring-persian-blue"
             />
         </label>
     );
