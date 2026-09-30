@@ -3,20 +3,21 @@ import { learningPathsData } from '../../data/learning-paths';
 
 export default function LearningPathsSection() {
     return (
-        <section className="w-full bg-white mt-4 py-20 px-4 md:px-8 flex flex-col items-center justify-center">
+        <section className="w-full bg-white mt-4 py-20 flex flex-col items-center justify-center">
+            <div className="w-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col items-center">
 
-            {/* --- HEADER SECTION --- */}
-            <div className="text-center max-w-3xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-[40px] text-black heading-s mb-4">
-                    {learningPathsData.heading}
-                </h2>
-                <p className="text-[#8C93A0] text-base md:text-[17px] max-w-3xl mx-auto body-l font-light">
-                    {learningPathsData.description}
-                </p>
-            </div>
+                {/* --- HEADER SECTION --- */}
+                <div className="text-center max-w-3xl mx-auto mb-16">
+                    <h2 className="text-3xl md:text-[40px] text-black heading-s mb-4">
+                        {learningPathsData.heading}
+                    </h2>
+                    <p className="text-[#8C93A0] text-base md:text-[17px] max-w-3xl mx-auto body-l font-light">
+                        {learningPathsData.description}
+                    </p>
+                </div>
 
-            {/* --- PATH CARDS GRID --- */}
-            <div className="w-full max-w-275 mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                {/* --- PATH CARDS GRID --- */}
+                <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
                 {learningPathsData.paths.map((path) => (
                     <motion.div
                         key={path.id}
@@ -35,6 +36,8 @@ export default function LearningPathsSection() {
                         </span>
                     </motion.div>
                 ))}
+                </div>
+
             </div>
 
         </section>

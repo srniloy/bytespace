@@ -6,19 +6,19 @@ const { logo, newsletter, linkColumns, legalLinks, copyright } = footerData;
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-white pt-20 pb-8 px-6 lg:px-12 font-sans border-t border-gray-100">
-            <div className="max-w-7xl mx-auto">
+        <footer className="w-full bg-white pt-16 pb-12 font-sans border-t border-gray-100">
+            <div className="max-w-7xl mx-auto px-4 md:px-8">
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 mb-32">
 
-                    <div className="lg:col-span-5 flex flex-col items-start pr-0 lg:pr-12">
+                    <div className="lg:col-span-6 flex flex-col items-start">
 
                         <div className="flex items-center gap-2 mb-6">
                             <NavLink to={logo.href} aria-label={logo.ariaLabel} className="w-40 cursor-pointer">
                                 <img src={logo.src} alt={logo.alt} />
                             </NavLink>
                         </div>
-                        <p className="text-gray-600 body-s mb-6">
+                        <p className="text-gray-600 body-s mb-12">
                             {newsletter.text}
                         </p>
 
@@ -27,6 +27,7 @@ export default function Footer() {
                             type="email"
                             placeholder={newsletter.searchPlaceholder}
                             buttonLabel={newsletter.searchButtonLabel}
+                            className="max-w-lg"
                             required
                         />
 
@@ -35,7 +36,7 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div className="lg:col-span-6 lg:mt-16 grid grid-cols-2 md:grid-cols-3 gap-8">
                         {linkColumns.map((column) => (
                             <nav key={column.id} className="flex flex-col gap-4">
                                 {column.links.map((link) => (

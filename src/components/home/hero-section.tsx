@@ -11,7 +11,7 @@ export default function HeroSection() {
             style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.png)' }}
             className="min-h-screen bg-persian-blue bg-cover flex flex-col relative overflow-hidden font-sans"
         >
-            <div className="flex-1 flex flex-col items-center pt-50 px-4 w-full max-w-7xl mx-auto relative z-10">
+            <div className="flex-1 flex flex-col items-center pt-50 px-4 md:px-8 w-full max-w-7xl mx-auto relative z-10">
 
                 {/* --- HERO TEXT SECTION --- */}
                 <div className="text-center max-w-4xl mx-auto mb-10">

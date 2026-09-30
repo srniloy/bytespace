@@ -16,19 +16,21 @@ export default function CourseSection() {
         : courseCategories.filter((category) => !category.hidden);
 
     return (
-        <section className="w-full bg-white py-20 px-4 md:px-8 flex flex-col items-center justify-center font-sans">
+        <section className="w-full bg-white py-20 flex flex-col items-center justify-center font-sans">
 
-            {/* --- HEADER & FILTERS --- */}
-            <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
-                <h2 className="text-4xl md:text-[44px] heading-m text-black max-w-xl mb-5">
-                    {courseSectionContent.heading}
-                </h2>
-                <p className="text-[#8C93A0] text-base md:text-[17px] body-l max-w-3xl mx-auto">
-                    {courseSectionContent.description}
-                </p>
-            </div>
+            <div className="w-full max-w-7xl mx-auto px-4 md:px-8 flex flex-col items-center">
 
-            <div className="w-full max-w-300 mx-auto flex flex-col items-center mb-16">
+                {/* --- HEADER & FILTERS --- */}
+                <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
+                    <h2 className="text-4xl md:text-[44px] heading-m text-black max-w-xl mb-5">
+                        {courseSectionContent.heading}
+                    </h2>
+                    <p className="text-[#8C93A0] text-base md:text-[17px] body-l max-w-3xl mx-auto">
+                        {courseSectionContent.description}
+                    </p>
+                </div>
+
+                <div className="w-full flex flex-col items-center mb-16">
                 <div className="flex flex-wrap justify-center gap-3 md:gap-4 w-full">
                     <AnimatePresence>
                         {displayedCategories.map((category) => (
@@ -58,13 +60,14 @@ export default function CourseSection() {
                 </div>
             </div>
 
-            {/* --- COURSE GRID --- */}
-            <div className="w-full max-w-300 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                {homeCourses.map((course) => (
-                    <CourseCard key={course.title} course={course} />
-                ))}
-            </div>
+                {/* --- COURSE GRID --- */}
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    {homeCourses.map((course) => (
+                        <CourseCard key={course.title} course={course} />
+                    ))}
+                </div>
 
+            </div>
 
             <LearningPathsSection />
         </section>
