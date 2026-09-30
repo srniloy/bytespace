@@ -62,7 +62,7 @@ export default function SearchBar({
             ) : (
                 <div className={INPUT_WRAPPER_CLASSES[variant]}>
                     <div className="flex items-center justify-center text-gray-400 mr-3">
-                        <img src="/icons/search-icon.png" className="h-7 w-7 opacity-70" alt="Search" />
+                        <img src="/icons/search-icon.webp" className="h-7 w-7 opacity-70" alt="Search" />
                     </div>
 
                     <input

@@ -11,6 +11,6 @@ export const brandData: BrandData = {
     },
     cart: {
         label: 'Cart',
-        icon: '/icons/cart-icon.png',
+        icon: '/icons/cart-icon.webp',
     },
 };

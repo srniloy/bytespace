@@ -7,7 +7,7 @@ export default function NotFoundPage() {
 
     return (
         <section
-            style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.png)' }}
+            style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.webp)' }}
             className="relative overflow-hidden bg-persian-blue bg-cover pt-44 pb-28 font-sans"
         >
             <div className="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-8 text-center">

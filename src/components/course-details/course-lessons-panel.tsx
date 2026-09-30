@@ -16,7 +16,7 @@ export default function CourseLessonsPanel() {
                 {lessonsPanel.modules.map((module) => (
                     <li key={module.title} className="flex items-start gap-6">
                         <span className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-accent-lime">
-                            <img src="/icons/camera-icon.png" alt="" className="size-8" />
+                            <img src="/icons/camera-icon.webp" alt="" className="size-8" />
                         </span>
                         <div className="min-w-0">
                             <p className="font-satoshi text-sm font-semibold text-gray-900">{module.title}</p>

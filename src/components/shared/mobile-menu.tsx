@@ -49,7 +49,7 @@ export default function MobileMenu({
             />
 
             <aside
-                style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.png)' }}
+                style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.webp)' }}
                 className={`absolute left-0 top-0 flex h-full w-[86%] max-w-sm flex-col border-r border-white/15 bg-persian-blue shadow-custom transition-transform duration-300 ${open ? 'translate-x-0' : '-translate-x-full'}`}
             >
                 <header className="flex h-30 shrink-0 items-center justify-between border-b border-white/15 px-6">

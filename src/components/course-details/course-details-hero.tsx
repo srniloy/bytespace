@@ -19,7 +19,7 @@ export default function CourseDetailsHero({ course }: CourseDetailsHeroProps) {
 
     return (
         <section
-            style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.png)' }}
+            style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.webp)' }}
             className="relative bg-persian-blue bg-cover pt-44 pb-16 font-sans"
         >
             <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8">
@@ -56,17 +56,17 @@ export default function CourseDetailsHero({ course }: CourseDetailsHeroProps) {
                 {/* --- STAT PILLS --- */}
                 <div className="mt-10 flex flex-wrap gap-4 md:gap-6">
                     <span className="flex items-center gap-2.5 rounded-full bg-white px-6 py-3 label-m text-gray-900">
-                        <img src="/icons/signal-blue-icon.png" alt="" className="h-5 w-5" />
+                        <img src="/icons/signal-blue-icon.webp" alt="" className="h-5 w-5" />
                         {stats.level}
                     </span>
 
                     <span className="flex items-center gap-2.5 rounded-full bg-white px-6 py-3 label-m text-gray-900">
-                        <img src="/icons/star-icon.png" alt="" className="h-5 w-5" />
+                        <img src="/icons/star-icon.webp" alt="" className="h-5 w-5" />
                         {stats.rating} ({stats.reviews} reviews)
                     </span>
 
                     <span className="flex items-center gap-2.5 rounded-full bg-white px-6 py-3 label-m text-gray-900">
-                        <img src="/icons/users-icon.png" alt="" className="h-5 w-5" />
+                        <img src="/icons/users-icon.webp" alt="" className="h-5 w-5" />
                         {stats.students} Students
                     </span>
                 </div>
@@ -104,7 +104,7 @@ export default function CourseDetailsHero({ course }: CourseDetailsHeroProps) {
                                         onClick={() => setIsPlaying(true)}
                                         className="absolute left-1/2 top-1/2 flex size-24 -translate-x-1/2 -translate-y-1/2 cursor-pointer items-center justify-center rounded-3xl bg-black/30 p-5.5 backdrop-blur-lg transition-transform duration-200 hover:scale-105"
                                     >
-                                        <img src="/icons/play-icon.png" alt="" className="size-full" />
+                                        <img src="/icons/play-icon.webp" alt="" className="size-full" />
                                     </button>
                                 )}
                             </div>
