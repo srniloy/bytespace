@@ -88,6 +88,7 @@ export const growthSectionData: GrowthSectionData = {
 
 
 export const singleCourse: Course = {
+    id: 'course-1',
     imageSrc: '/images/course-card-thumbnail-1.jpg',
     lessonCount: 17,
     duration: '2 hours 16 mins',

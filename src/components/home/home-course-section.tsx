@@ -15,6 +15,8 @@ export default function CourseSection() {
         ? courseCategories
         : courseCategories.filter((category) => !category.hidden);
 
+    const visibleCourses = homeCourses.slice(0, 6);
+
     return (
         <section className="w-full bg-white py-20 flex flex-col items-center justify-center font-sans">
 
@@ -62,8 +64,8 @@ export default function CourseSection() {
 
                 {/* --- COURSE GRID --- */}
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    {homeCourses.map((course) => (
-                        <CourseCard key={course.title} course={course} />
+                    {visibleCourses.map((course) => (
+                        <CourseCard key={course.id} course={course} />
                     ))}
                 </div>
 

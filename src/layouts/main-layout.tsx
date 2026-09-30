@@ -11,8 +11,8 @@ export default function MainLayout() {
         <div className="flex min-h-screen flex-col">
             <Navbar />
 
-            {/* the hero page manages its own top spacing; other pages clear the fixed navbar */}
-            <main className={`flex-1 ${pathname === '/' ? '' : 'pt-30'}`}>
+            {/* hero pages manage their own top spacing; other pages clear the fixed navbar */}
+            <main className={`flex-1 ${pathname === '/' || pathname.startsWith('/courses') ? '' : 'pt-30'}`}>
                 <Suspense fallback={<PageLoader />}>
                     <Outlet />
                 </Suspense>

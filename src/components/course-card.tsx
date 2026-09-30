@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import AvatarStack from './avatar-stack';
 import { courseCardLabels, type Course } from '../data/courses';
 
@@ -27,11 +28,12 @@ export default function CourseCard({ course }: CourseCardProps) {
     ];
 
     return (
-        <motion.div
-            whileHover={{ y: -4, boxShadow: '0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
-            transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="w-full bg-white rounded-3xl p-3 border border-gray-100 shadow-sm flex flex-col font-sans cursor-pointer group h-full"
-        >
+        <Link to={`/courses/${course.id}`} className="block h-full cursor-pointer group">
+            <motion.div
+                whileHover={{ y: -4, boxShadow: '0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
+                transition={{ duration: 0.2, ease: 'easeOut' }}
+                className="w-full bg-white rounded-3xl p-3 border border-gray-100 shadow-sm flex flex-col font-sans h-full"
+            >
             {/* --- 1. IMAGE & OVERLAY PILLS --- */}
             <div className="relative w-full aspect-16/10 rounded-2xl overflow-hidden mb-4 shrink-0">
                 <img
@@ -86,5 +88,6 @@ export default function CourseCard({ course }: CourseCardProps) {
                 </span>
             </div>
         </motion.div>
+        </Link>
     );
 }
