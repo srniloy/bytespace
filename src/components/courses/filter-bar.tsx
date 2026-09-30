@@ -4,8 +4,8 @@ import { coursesPageData } from '../../data/courses-page';
 const { filters, categories } = coursesPageData;
 
 const PILL_CLASSES = 'flex h-12 cursor-pointer items-center gap-2 rounded-full border border-gray-200 bg-white px-4 body-s font-medium text-gray-700 transition-colors duration-200 hover:bg-gray-50';
-const ACTIVE_CHIP_CLASSES = 'bg-[#CCFF00] text-black';
-const IDLE_CHIP_CLASSES = 'bg-[#F4F5F6] text-[#5C636E] hover:bg-[#EAEBED] hover:text-black';
+const ACTIVE_CHIP_CLASSES = 'bg-accent-lime text-black';
+const IDLE_CHIP_CLASSES = 'bg-chip text-[#5C636E] hover:bg-[#EAEBED] hover:text-black';
 
 const ICON_CLASSES = 'h-4 w-4';
 

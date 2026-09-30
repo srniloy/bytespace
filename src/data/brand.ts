@@ -1,19 +1,6 @@
-export interface BrandLogo {
-    src: string;
-    alt: string;
-    href: string;
-    ariaLabel: string;
-}
+import type { BrandData } from '../types/brand';
 
-export interface BrandCart {
-    label: string;
-    icon: string;
-}
-
-export interface BrandData {
-    logo: BrandLogo;
-    cart: BrandCart;
-}
+export type { BrandCart, BrandData, BrandLogo } from '../types/brand';
 
 export const brandData: BrandData = {
     logo: {

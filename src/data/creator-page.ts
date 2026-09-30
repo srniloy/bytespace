@@ -1,31 +1,6 @@
-export interface Creator {
-    id: string;
-    name: string;
-    badge: string;
-    role: string;
-    avatar: {
-        src: string;
-        alt: string;
-    };
-    bio: string[];
-    products: number;
-    followers: number;
-}
+import type { Creator, CreatorPageData } from '../types/creator-page';
 
-export interface CreatorCardLabels {
-    productsSuffix: string;
-    followersSuffix: string;
-    viewLabel: string;
-}
-
-export interface CreatorPageData {
-    listing: {
-        heading: string;
-        description: string;
-    };
-    cardLabels: CreatorCardLabels;
-    followLabel: string;
-}
+export type { Creator, CreatorCardLabels, CreatorPageData } from '../types/creator-page';
 
 export const creatorPageData: CreatorPageData = {
     listing: {

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import Button from '../components/button';
 import usePageTitle from '../hooks/use-page-title';
+import Button from '../components/shared/button';
 
 export default function NotFoundPage() {
     usePageTitle('Page Not Found');

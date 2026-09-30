@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import type { NavLinkItem } from '../data/nav';
-import { brandData } from '../data/brand';
+import type { NavLinkItem } from '../../types/nav';
+import { brandData } from '../../data/brand';
 
 const { logo, cart } = brandData;
 

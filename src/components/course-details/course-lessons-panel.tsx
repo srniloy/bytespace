@@ -1,4 +1,4 @@
-import LearningProgressCard from '../learning-progress-card';
+import LearningProgressCard from '../shared/learning-progress-card';
 import { courseDetailsData } from '../../data/course-details';
 
 const { lessonsPanel } = courseDetailsData;

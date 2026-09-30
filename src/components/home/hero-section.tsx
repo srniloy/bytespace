@@ -1,6 +1,6 @@
-import HappyUserCard from "../happy-user-card";
-import LearningProgressCard from "../learning-progress-card";
-import SearchBar from "../search-bar";
+import HappyUserCard from "../shared/happy-user-card";
+import LearningProgressCard from "../shared/learning-progress-card";
+import SearchBar from "../shared/search-bar";
 import { heroData } from "../../data/hero";
 
 const { headingLines, description, search, personImage, floatingCard, learningProgress } = heroData;
@@ -30,7 +30,7 @@ export default function HeroSection() {
 
                 <div className="relative w-full max-w-4xl mx-auto flex justify-center mt-auto">
 
-                    <div className="absolute -top-20 mt-10 w-[90vw] h-[150vw] md:w-[70vw] md:h-[70vw] bg-[#CCFF00] rounded-full -z-10"></div>
+                    <div className="absolute -top-20 mt-10 w-[90vw] h-[150vw] md:w-[70vw] md:h-[70vw] bg-accent-lime rounded-full -z-10"></div>
 
                     <img
                         src={personImage.src}
@@ -52,12 +52,12 @@ export default function HeroSection() {
 
             {/* ------ layout floating styles ---------- */}
 
-            <img className='hidden xl:block absolute -left-21.25 top-62.5' src="/layout-designs/hero-spiral-bg-1.png" alt="layout styles" />
-            <img className='hidden xl:block absolute -right-40 top-62.5' src="/layout-designs/hero-spiral-bg-2.png" alt="layout styles" />
-            <img className='hidden xl:block absolute right-40 bottom-90' src="/layout-designs/hero-spiral-bg-3.png" alt="layout styles" />
-            <img className='hidden xl:block absolute left-50 bottom-100' src="/layout-designs/hero-spiral-bg-4.png" alt="layout styles" />
-            <img className='hidden xl:block absolute right-15 bottom-0 max-[1550px]:w-70 z-10' src="/layout-designs/hero-spiral-bg-5.png" alt="layout styles" />
-            <img className='hidden xl:block absolute left-40 max-[1550px]:w-80 max-[1550px]:left-0 bottom-0 z-10' src="/layout-designs/hero-spiral-bg-6.png" alt="layout styles" />
+            <img aria-hidden="true" className='hidden xl:block absolute -left-21.25 top-62.5' src="/layout-designs/hero-spiral-bg-1.png" alt="" loading="lazy" decoding="async" />
+            <img aria-hidden="true" className='hidden xl:block absolute -right-40 top-62.5' src="/layout-designs/hero-spiral-bg-2.png" alt="" loading="lazy" decoding="async" />
+            <img aria-hidden="true" className='hidden xl:block absolute right-40 bottom-90' src="/layout-designs/hero-spiral-bg-3.png" alt="" loading="lazy" decoding="async" />
+            <img aria-hidden="true" className='hidden xl:block absolute left-50 bottom-100' src="/layout-designs/hero-spiral-bg-4.png" alt="" loading="lazy" decoding="async" />
+            <img aria-hidden="true" className='hidden xl:block absolute right-15 bottom-0 max-[1550px]:w-70 z-10' src="/layout-designs/hero-spiral-bg-5.png" alt="" loading="lazy" decoding="async" />
+            <img aria-hidden="true" className='hidden xl:block absolute left-40 max-[1550px]:w-80 max-[1550px]:left-0 bottom-0 z-10' src="/layout-designs/hero-spiral-bg-6.png" alt="" loading="lazy" decoding="async" />
         </section>
     )
 }

@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import SearchBar from "./search-bar";
-import { footerData } from "../data/footer";
+import { footerData } from "../../data/footer";
 
 const { logo, newsletter, linkColumns, legalLinks, copyright } = footerData;
 

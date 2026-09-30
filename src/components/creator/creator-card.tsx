@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { creatorPageData, type Creator } from '../../data/creator-page';
+import { creatorPageData } from '../../data/creator-page';
+import type { Creator } from '../../types/creator-page';
 
 const { cardLabels } = creatorPageData;
 
@@ -35,13 +36,13 @@ export default function CreatorCard({ creator }: CreatorCardProps) {
 
                 <div className="mt-4 flex flex-wrap justify-center gap-3">
                     {stats.map((stat) => (
-                        <span key={stat} className="rounded-full bg-[#F4F5F6] px-4 py-1.5 label-xs text-gray-700">
+                        <span key={stat} className="rounded-full bg-chip px-4 py-1.5 label-xs text-gray-700">
                             {stat}
                         </span>
                     ))}
                 </div>
 
-                <span className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#CCFF00] px-6 py-2.5 label-s text-black transition-colors duration-200 group-hover:bg-[#b3e600]">
+                <span className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-accent-lime px-6 py-2.5 label-s text-black transition-colors duration-200 group-hover:brightness-95">
                     {cardLabels.viewLabel}
                 </span>
             </motion.div>

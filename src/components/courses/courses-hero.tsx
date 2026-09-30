@@ -1,4 +1,4 @@
-import SearchBar from "../search-bar";
+import SearchBar from "../shared/search-bar";
 import { coursesPageData } from "../../data/courses-page";
 
 const { hero } = coursesPageData;

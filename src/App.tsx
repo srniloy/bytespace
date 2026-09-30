@@ -2,7 +2,7 @@ import { lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainLayout from './layouts/main-layout';
 import AuthLayout from './layouts/auth-layout';
-import ScrollToTop from './components/scroll-to-top';
+import ScrollToTop from './components/shared/scroll-to-top';
 import NotFoundPage from './pages/not-found-page';
 
 const HomePage = lazy(() => import('./pages/home-page'));
@@ -26,7 +26,7 @@ function App() {
           <Route path="/creators/:id" element={<CreatorPage />} />
         </Route>
 
-        <Route element={<MainLayout hero />}>
+        <Route element={<MainLayout inside />}>
           <Route path="*" element={<NotFoundPage />} />
         </Route>
 

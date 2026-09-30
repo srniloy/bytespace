@@ -1,10 +1,6 @@
-export interface HappyUserCardData {
-    title: string;
-    rating: string;
-    reviewCount: string;
-    avatars: string[];
-    badge: string;
-}
+import type { HappyUserCardData } from '../types/happy-user-card';
+
+export type { HappyUserCardData } from '../types/happy-user-card';
 
 export const happyUserCardData: HappyUserCardData = {
     title: 'Happy Students',

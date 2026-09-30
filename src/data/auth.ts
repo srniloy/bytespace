@@ -1,12 +1,6 @@
-export interface AuthShowcaseData {
-    heading: string;
-    description: string;
-}
+import type { AuthData } from '../types/auth';
 
-export interface AuthData {
-    register: AuthShowcaseData;
-    signIn: AuthShowcaseData;
-}
+export type { AuthData, AuthShowcaseData } from '../types/auth';
 
 export const authData: AuthData = {
     register: {

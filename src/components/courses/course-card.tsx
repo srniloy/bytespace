@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import AvatarStack from '../avatar-stack';
-import { courseCardLabels, type Course } from '../../data/courses';
+import { courseCardLabels } from '../../data/courses';
+import type { Course } from '../../types/courses';
 import { getCreatorLink } from '../../data/creator-page';
+import AvatarStack from '../shared/avatar-stack';
 
 export interface CourseCardProps {
     course: Course;
@@ -66,7 +67,7 @@ export default function CourseCard({ course }: CourseCardProps) {
                         {courseCardLabels.creatorPrefix}{' '}
                         <Link
                             to={getCreatorLink(creator)}
-                            className="relative z-10 text-[#0033FF] hover:underline"
+                            className="relative z-10 text-persian-blue hover:underline"
                         >
                             {creator}
                         </Link>
@@ -81,7 +82,7 @@ export default function CourseCard({ course }: CourseCardProps) {
 
             <div className="px-1 flex items-center gap-4 mt-4 mb-5">
 
-                <div className="flex items-center gap-1.5 bg-[#F4F5F6] text-gray-700 px-4 py-1.5 rounded-full shrink-0">
+                <div className="flex items-center gap-1.5 bg-chip text-gray-700 px-4 py-1.5 rounded-full shrink-0">
                     <img src={courseCardLabels.levelIcon.src} className='w-6 h-6' alt={courseCardLabels.levelIcon.alt} />
                     <span className=' label-xs'>{level}</span>
                 </div>
@@ -92,7 +93,7 @@ export default function CourseCard({ course }: CourseCardProps) {
 
             {/* --- 4. PRICE --- */}
             <div className="px-1 pb-1 mt-auto">
-                <span className="heading-xs text-[#0033FF]">
+                <span className="heading-xs text-persian-blue">
                     ${price}
                 </span>
                 <span className=" text-gray-600 body-xs ml-0.5">

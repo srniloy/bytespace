@@ -1,7 +1,7 @@
 import CourseCard from '../courses/course-card';
-import HappyUserCard from '../happy-user-card';
+import HappyUserCard from '../shared/happy-user-card';
 import { homeCourses } from '../../data/courses';
-import type { AuthShowcaseData } from '../../data/auth';
+import type { AuthShowcaseData } from '../../types/auth';
 import type { Shape } from '../home/creator-section';
 
 interface AuthShowcaseProps {

@@ -23,7 +23,7 @@ export default function LearningPathsSection() {
                             transition={{ duration: 0.2 }}
                             className="flex flex-col items-center justify-center bg-white border border-gray-200 rounded-3xl p-4 md:p-6 cursor-pointer group hover:border-gray-300 transition-colors duration-200"
                         >
-                            <div className="w-14 h-14 rounded-full bg-[#CCFF00] flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                            <div className="w-14 h-14 rounded-full bg-accent-lime flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
                                 <img src={path.iconSrc} alt={path.iconAlt} />
                             </div>
 
