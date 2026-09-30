@@ -1,6 +1,6 @@
 import CourseCard from '../courses/course-card';
-import HappyUserCard from '../happy-user-card';
-import LearningProgressCard from '../learning-progress-card';
+import HappyUserCard from '../shared/happy-user-card';
+import LearningProgressCard from '../shared/learning-progress-card';
 import { growthSectionData, singleCourse } from '../../data/growth-section';
 
 const { growth, creators, revenueCard, yearCard, learningProgress } = growthSectionData;

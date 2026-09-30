@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import AuthShowcase from './auth-showcase';
-import type { AuthShowcaseData } from '../../data/auth';
+import type { AuthShowcaseData } from '../../types/auth';
 
 interface AuthScreenProps {
     children: ReactNode;

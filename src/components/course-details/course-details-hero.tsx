@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../button';
+import Button from '../shared/button';
 import CourseEnrollCard from './course-enroll-card';
 import { courseDetailsData } from '../../data/course-details';
 import { getCreatorLink } from '../../data/creator-page';
-import type { Course } from '../../data/courses';
+import type { Course } from '../../types/courses';
 
 const { hero } = courseDetailsData;
 
@@ -113,7 +113,7 @@ export default function CourseDetailsHero({ course }: CourseDetailsHeroProps) {
 
                     <CourseEnrollCard
                         course={course}
-                        className="mt-10 w-full lg:absolute lg:right-0 lg:top-0 lg:mt-0 lg:w-[400px]"
+                        className="mt-10 w-full lg:absolute lg:right-0 lg:top-0 lg:mt-0 lg:w-100"
                     />
                 </div>
             </div>

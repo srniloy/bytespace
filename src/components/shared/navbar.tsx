@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { authLinks, centerLinks } from '../data/nav';
-import { brandData } from '../data/brand';
+import { authLinks, centerLinks } from '../../data/nav';
+import { brandData } from '../../data/brand';
 import MobileMenu from './mobile-menu';
 
 const { logo, cart } = brandData;

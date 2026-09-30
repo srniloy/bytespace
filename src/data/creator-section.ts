@@ -1,11 +1,6 @@
-export interface CreatorCtaData {
-    headingLines: string[];
-    description: string;
-    button: {
-        label: string;
-        href: string;
-    };
-}
+import type { CreatorCtaData } from '../types/creator-section';
+
+export type { CreatorCtaData } from '../types/creator-section';
 
 export const creatorCtaData: CreatorCtaData = {
     headingLines: ['Unlock Your Potential as a', 'Creator with ByteSpace'],

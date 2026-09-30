@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import AuthScreen from '../components/auth/auth-screen';
 import AuthFormCard from '../components/auth/auth-form-card';
 import SocialLogin from '../components/auth/social-login';
-import FormField from '../components/form-field';
-import Button from '../components/button';
+import FormField from '../components/shared/form-field';
 import { authData } from '../data/auth';
 import usePageTitle from '../hooks/use-page-title';
+import Button from '../components/shared/button';
 
 export default function LoginPage() {
     usePageTitle('Sign In');

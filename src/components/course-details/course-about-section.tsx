@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { courseDetailsData } from '../../data/course-details';
-import type { CourseTabId } from '../../data/course-details';
+import type { CourseTabId } from '../../types/course-details';
 import CourseAboutPanel from './course-about-panel';
 import CourseLessonsPanel from './course-lessons-panel';
 import CourseReviewsPanel from './course-reviews-panel';
@@ -25,7 +25,7 @@ export default function CourseAboutSection() {
                                 className={`cursor-pointer rounded-full px-5 py-3 label-s transition-colors duration-200 ${
                                     activeTab === tab.id
                                         ? 'bg-accent-lime text-gray-900'
-                                        : 'bg-[#F4F5F6] text-gray-700 hover:bg-gray-200'
+                                        : 'bg-chip text-gray-700 hover:bg-gray-200'
                                 }`}
                             >
                                 {tab.label}

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { cn } from '../../lib/cn';
 
 type AvatarStackSize = 'sm' | 'md';
 
@@ -14,7 +15,7 @@ const AVATAR_CLASSES: Record<AvatarStackSize, string> = {
     md: 'w-8 h-8 rounded-full border-2 border-white object-cover',
 };
 
-const BADGE_BASE = 'rounded-full border-2 border-white bg-[#CCFF00] flex items-center justify-center font-bold text-black';
+const BADGE_BASE = 'rounded-full border-2 border-white bg-accent-lime flex items-center justify-center font-bold text-black';
 
 const BADGE_CLASSES: Record<AvatarStackSize, string> = {
     sm: 'w-6 h-6 md:w-8 md:h-8 text-[8px] md:text-[10px] -ml-1',
@@ -23,10 +24,10 @@ const BADGE_CLASSES: Record<AvatarStackSize, string> = {
 
 export default function AvatarStack({ avatars, badge, size = 'md', className = '' }: AvatarStackProps) {
     return (
-        <div className={`flex items-center ${className}`}>
+        <div className={cn('flex items-center', className)}>
             <div className="flex -space-x-2">
                 {avatars.map((url) => (
-                    <img key={url} src={url} alt="Student" className={AVATAR_CLASSES[size]} />
+                    <img key={url} src={url} alt="Student" loading="lazy" decoding="async" className={AVATAR_CLASSES[size]} />
                 ))}
                 {badge != null && (
                     <div className={`${BADGE_BASE} ${BADGE_CLASSES[size]}`}>

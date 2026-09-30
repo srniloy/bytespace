@@ -1,8 +1,6 @@
-export interface NavLinkItem {
-    label: string;
-    href: string;
-    variant?: 'primary';
-}
+import type { NavLinkItem } from '../types/nav';
+
+export type { NavLinkItem } from '../types/nav';
 
 export const centerLinks: NavLinkItem[] = [
     { label: 'Home', href: '/' },

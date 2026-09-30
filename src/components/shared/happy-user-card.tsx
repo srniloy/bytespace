@@ -1,5 +1,5 @@
 import AvatarStack from './avatar-stack';
-import { happyUserCardData } from '../data/happy-user-card';
+import { happyUserCardData } from '../../data/happy-user-card';
 
 const { title, rating, reviewCount, avatars, badge } = happyUserCardData;
 

@@ -21,7 +21,7 @@ export default function CourseReviewsPanel() {
             <p className="mt-6 body-m text-gray-600">{reviewsPanel.intro}</p>
 
             <div className="mt-8 flex flex-col gap-6 rounded-2xl border border-gray-200 p-6 sm:flex-row sm:p-10">
-                <div className="flex h-28 w-full shrink-0 flex-col items-center justify-center rounded-xl bg-accent-lime sm:h-[140px] sm:w-32">
+                <div className="flex h-28 w-full shrink-0 flex-col items-center justify-center rounded-xl bg-accent-lime sm:h-35 sm:w-32">
                     <span className="font-poppins text-base font-bold text-gray-900">{reviewsPanel.summary.label}</span>
                     <span className="mt-2 font-poppins text-5xl font-bold text-gray-900">{reviewsPanel.summary.rating}</span>
                 </div>
@@ -50,11 +50,10 @@ export default function CourseReviewsPanel() {
                         key={filter.id}
                         type="button"
                         onClick={() => setRatingFilter(filter.id)}
-                        className={`cursor-pointer rounded-full px-4 py-3.5 label-s transition-colors duration-200 ${
-                            ratingFilter === filter.id
+                        className={`cursor-pointer rounded-full px-4 py-3.5 label-s transition-colors duration-200 ${ratingFilter === filter.id
                                 ? 'bg-accent-lime text-gray-900'
-                                : 'bg-[#F4F5F6] text-gray-700 hover:bg-gray-200'
-                        }`}
+                                : 'bg-chip text-gray-700 hover:bg-gray-200'
+                            }`}
                     >
                         {filter.id !== 'all' && <span className="mr-1 text-sm" aria-hidden="true">★</span>}
                         {filter.label}

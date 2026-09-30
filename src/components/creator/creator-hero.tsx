@@ -1,5 +1,6 @@
-import Button from '../button';
-import { creatorPageData, type Creator } from '../../data/creator-page';
+import Button from '../shared/button';
+import { creatorPageData } from '../../data/creator-page';
+import type { Creator } from '../../types/creator-page';
 
 const { followLabel, cardLabels } = creatorPageData;
 

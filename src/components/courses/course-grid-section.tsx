@@ -3,8 +3,10 @@ import { useSearchParams } from "react-router-dom";
 import CourseCard from "./course-card";
 import CoursePagination from "./course-pagination";
 import FilterBar from "./filter-bar";
+import Container from "../shared/container";
 import { homeCourses } from "../../data/courses";
 import { coursesPageData } from "../../data/courses-page";
+import { getPageCourses } from "../../lib/pagination";
 
 const { pagination } = coursesPageData;
 
@@ -12,14 +14,12 @@ export default function CourseGridSection() {
     const [searchParams, setSearchParams] = useSearchParams();
     const sectionRef = useRef<HTMLElement>(null);
 
-    const totalPages = Math.max(1, Math.ceil(homeCourses.length / pagination.coursesPerPage));
     const requestedPage = Number(searchParams.get("page"));
-    const currentPage = Number.isFinite(requestedPage) && requestedPage >= 1
-        ? Math.min(Math.floor(requestedPage), totalPages)
-        : 1;
-
-    const startIndex = (currentPage - 1) * pagination.coursesPerPage;
-    const pageCourses = homeCourses.slice(startIndex, startIndex + pagination.coursesPerPage);
+    const { pageCourses, currentPage, totalPages } = getPageCourses(
+        homeCourses,
+        requestedPage,
+        pagination.coursesPerPage,
+    );
 
     const handlePageChange = (page: number) => {
         setSearchParams(page > 1 ? { page: String(page) } : {});
@@ -28,7 +28,7 @@ export default function CourseGridSection() {
 
     return (
         <section ref={sectionRef} className="w-full bg-white pt-20 pb-16 font-sans scroll-mt-20">
-            <div className="w-full max-w-7xl mx-auto px-4 md:px-8">
+            <Container>
 
                 <FilterBar />
 
@@ -45,7 +45,7 @@ export default function CourseGridSection() {
                     className="mt-20"
                 />
 
-            </div>
+            </Container>
         </section>
     );
 }

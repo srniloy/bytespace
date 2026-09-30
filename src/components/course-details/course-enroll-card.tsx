@@ -1,10 +1,10 @@
 import type { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../button';
 import { courseDetailsData } from '../../data/course-details';
 import { getCreatorLink } from '../../data/creator-page';
-import type { IncludeIconKey } from '../../data/course-details';
-import type { Course } from '../../data/courses';
+import type { IncludeIconKey } from '../../types/course-details';
+import type { Course } from '../../types/courses';
+import Button from '../shared/button';
 
 const { enroll } = courseDetailsData;
 
@@ -53,7 +53,7 @@ export default function CourseEnrollCard({ course, className = '' }: CourseEnrol
                     <li key={lesson.number} className="flex items-start justify-between gap-4">
                         <div className="flex gap-3">
                             <span className="label-s text-gray-400">{lesson.number}</span>
-                            <span className="label-s leading-snug text-gray-800 max-w-[170px]">{lesson.title}</span>
+                            <span className="label-s leading-snug text-gray-800 max-w-42.5">{lesson.title}</span>
                         </div>
                         <span className="label-xs shrink-0 text-persian-blue">{lesson.duration}</span>
                     </li>

@@ -1,35 +1,14 @@
-export interface CoursesPageHero {
-    heading: string;
-    search: {
-        placeholder: string;
-        buttonLabel: string;
-        showChevron: boolean;
-    };
-}
+import type { CoursesPageData } from '../types/courses-page';
 
-export interface FilterOption {
-    id: string;
-    label: string;
-}
+export type {
+    CoursesPageData,
+    CoursesPageHero,
+    CourseCategoryOption,
+    FilterOption,
+    PaginationConfig,
+} from '../types/courses-page';
 
-export interface CourseCategoryOption {
-    id: string;
-    label: string;
-}
-
-export interface PaginationConfig {
-    coursesPerPage: number;
-}
-
-export const coursesPageData: {
-    hero: CoursesPageHero;
-    filters: {
-        options: FilterOption[];
-        sortLabel: string;
-    };
-    categories: CourseCategoryOption[];
-    pagination: PaginationConfig;
-} = {
+export const coursesPageData: CoursesPageData = {
     hero: {
         heading: 'Find Your Next Course',
         search: {

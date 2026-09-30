@@ -1,16 +1,6 @@
-export interface Testimonial {
-    id: string;
-    name: string;
-    role: string;
-    quote: string;
-    avatar: string;
-}
+import type { TestimonialsData } from '../types/testimonials';
 
-export interface TestimonialsData {
-    heading: string;
-    description: string;
-    testimonials: Testimonial[];
-}
+export type { Testimonial, TestimonialsData } from '../types/testimonials';
 
 export const testimonialsData: TestimonialsData = {
     heading: 'Discover What Our Community Is Saying',

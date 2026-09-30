@@ -1,29 +1,6 @@
-export interface CourseCategory {
-    id: string;
-    label: string;
-    hidden?: boolean;
-}
+import type { Course, CourseCardLabels, CourseCategory, CourseSectionContent } from '../types/courses';
 
-export interface Course {
-    id: string;
-    imageSrc: string;
-    lessonCount: number;
-    duration: string;
-    commentCount?: number;
-    title: string;
-    creator: string;
-    rating: number;
-    level: string;
-    price: number;
-    avatars: string[];
-    extraStudents: number;
-}
-
-export interface CourseSectionContent {
-    heading: string;
-    description: string;
-    showMoreLabel: string;
-}
+export type { Course, CourseCardLabels, CourseCategory, CourseSectionContent } from '../types/courses';
 
 export const courseSectionContent: CourseSectionContent = {
     heading: 'Discover Your Passion, Build Your Skills',
@@ -31,18 +8,6 @@ export const courseSectionContent: CourseSectionContent = {
         'At Bytespace Courses, we bring you closer to life-changing knowledge. Explore a variety of courses across different fields, from technology to the arts, and make a difference in your career and life.',
     showMoreLabel: '+ More',
 };
-
-export interface CourseCardLabels {
-    lessonsSuffix: string;
-    commentsSuffix: string;
-    creatorPrefix: string;
-    studentsSuffix: string;
-    priceSuffix: string;
-    levelIcon: {
-        src: string;
-        alt: string;
-    };
-}
 
 export const courseCardLabels: CourseCardLabels = {
     lessonsSuffix: ' Lessons',

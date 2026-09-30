@@ -1,15 +1,6 @@
-export interface LearningPath {
-    id: string;
-    label: string;
-    iconSrc: string;
-    iconAlt: string;
-}
+import type { LearningPathsData } from '../types/learning-paths';
 
-export interface LearningPathsData {
-    heading: string;
-    description: string;
-    paths: LearningPath[];
-}
+export type { LearningPath, LearningPathsData } from '../types/learning-paths';
 
 export const learningPathsData: LearningPathsData = {
     heading: 'Explore Diverse Learning Paths at Bytespace',

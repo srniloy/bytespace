@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import Button from '../button';
 import { creatorCtaData } from '../../data/creator-section';
+import Button from '../shared/button';
 
 const { headingLines, description, button } = creatorCtaData;
 

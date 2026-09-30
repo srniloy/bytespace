@@ -1,12 +1,6 @@
-export interface TrustedLogo {
-    id: number;
-    name: string;
-    iconSrc: string;
-}
+import type { TrustedByData } from '../types/trusted-by';
 
-export interface TrustedByData {
-    logos: TrustedLogo[];
-}
+export type { TrustedByData, TrustedLogo } from '../types/trusted-by';
 
 export const trustedByData: TrustedByData = {
     logos: [
