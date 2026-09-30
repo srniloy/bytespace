@@ -9,9 +9,9 @@ interface AuthShowcaseProps {
 }
 
 const SHAPES: Shape[] = [
-    { src: '/layout-designs/hero-spiral-bg-10.png', className: 'top-[29%] left-[20%] z-30 w-32' },
-    { src: '/layout-designs/hero-spiral-bg-4.png', className: 'bottom-[24%] right-[18%] z-30 w-16 md:w-36' },
-    { src: '/layout-designs/hero-spiral-bg-8.png', className: 'bottom-[20%] left-[18%] w-24 md:w-32' },
+    { src: '/layout-designs/hero-spiral-bg-10.webp', className: 'top-[29%] left-[20%] z-30 w-32' },
+    { src: '/layout-designs/hero-spiral-bg-4.webp', className: 'bottom-[24%] right-[18%] z-30 w-16 md:w-36' },
+    { src: '/layout-designs/hero-spiral-bg-8.webp', className: 'bottom-[20%] left-[18%] w-24 md:w-32' },
 ];
 
 function Shape({ src, className }: Shape) {

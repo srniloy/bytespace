@@ -13,7 +13,7 @@ interface AuthScreenProps {
 export default function AuthScreen({ children, showcase }: AuthScreenProps) {
     return (
         <div
-            style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.png)' }}
+            style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.webp)' }}
             className="min-h-screen w-full bg-persian-blue bg-cover"
         >
             <div className="mx-auto flex min-h-screen w-full max-w-[1440px] flex-col lg:flex-row">

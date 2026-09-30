@@ -8,7 +8,7 @@ const { headingLines, description, search, personImage, floatingCard, learningPr
 export default function HeroSection() {
     return (
         <section
-            style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.png)' }}
+            style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.webp)' }}
             className="min-h-screen bg-persian-blue bg-cover flex flex-col relative overflow-hidden font-sans"
         >
             <div className="flex-1 flex flex-col items-center pt-50 px-4 md:px-8 w-full max-w-7xl mx-auto relative z-10">
@@ -56,12 +56,12 @@ export default function HeroSection() {
 
             {/* ------ layout floating styles ---------- */}
 
-            <img aria-hidden="true" className='hidden xl:block absolute -left-21.25 top-62.5' src="/layout-designs/hero-spiral-bg-1.png" alt="" loading="lazy" decoding="async" />
-            <img aria-hidden="true" className='hidden xl:block absolute -right-40 top-62.5' src="/layout-designs/hero-spiral-bg-2.png" alt="" loading="lazy" decoding="async" />
-            <img aria-hidden="true" className='hidden xl:block absolute right-40 bottom-90' src="/layout-designs/hero-spiral-bg-3.png" alt="" loading="lazy" decoding="async" />
-            <img aria-hidden="true" className='hidden xl:block absolute left-50 bottom-100' src="/layout-designs/hero-spiral-bg-4.png" alt="" loading="lazy" decoding="async" />
-            <img aria-hidden="true" className='hidden xl:block absolute right-15 bottom-0 max-[1550px]:w-70 z-10' src="/layout-designs/hero-spiral-bg-5.png" alt="" loading="lazy" decoding="async" />
-            <img aria-hidden="true" className='hidden xl:block absolute left-40 max-[1550px]:w-80 max-[1550px]:left-0 bottom-0 z-10' src="/layout-designs/hero-spiral-bg-6.png" alt="" loading="lazy" decoding="async" />
+            <img aria-hidden="true" className='hidden xl:block absolute -left-21.25 top-62.5' src="/layout-designs/hero-spiral-bg-1.webp" alt="" loading="lazy" decoding="async" />
+            <img aria-hidden="true" className='hidden xl:block absolute -right-40 top-62.5' src="/layout-designs/hero-spiral-bg-2.webp" alt="" loading="lazy" decoding="async" />
+            <img aria-hidden="true" className='hidden xl:block absolute right-40 bottom-90' src="/layout-designs/hero-spiral-bg-3.webp" alt="" loading="lazy" decoding="async" />
+            <img aria-hidden="true" className='hidden xl:block absolute left-50 bottom-100' src="/layout-designs/hero-spiral-bg-4.webp" alt="" loading="lazy" decoding="async" />
+            <img aria-hidden="true" className='hidden xl:block absolute right-15 bottom-0 max-[1550px]:w-70 z-10' src="/layout-designs/hero-spiral-bg-5.webp" alt="" loading="lazy" decoding="async" />
+            <img aria-hidden="true" className='hidden xl:block absolute left-40 max-[1550px]:w-80 max-[1550px]:left-0 bottom-0 z-10' src="/layout-designs/hero-spiral-bg-6.webp" alt="" loading="lazy" decoding="async" />
         </section>
     )
 }

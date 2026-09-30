@@ -16,7 +16,7 @@ export default function CreatorHero({ creator }: CreatorHeroProps) {
 
     return (
         <section
-            style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.png)' }}
+            style={{ backgroundImage: 'url(/layout-designs/hero-section-grid.webp)' }}
             className="relative overflow-hidden bg-persian-blue bg-cover pt-44 pb-20 font-sans"
         >
             <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8">

@@ -16,7 +16,7 @@ export const courseCardLabels: CourseCardLabels = {
     studentsSuffix: '+',
     priceSuffix: '/lifetime',
     levelIcon: {
-        src: '/icons/signal-icon.png',
+        src: '/icons/signal-icon.webp',
         alt: 'signal',
     },
 };
