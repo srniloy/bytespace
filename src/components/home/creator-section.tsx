@@ -48,7 +48,7 @@ export default function CreatorSection() {
                     {headingLines[0]} <br className="hidden md:block" /> {headingLines[1]}
                 </h2>
 
-                <p className="text-blue-100 body-l max-w-3xl mx-auto mb-10">
+                <p className="text-blue-100 body-m md:body-l max-w-3xl mx-auto mb-10">
                     {description}
                 </p>
 

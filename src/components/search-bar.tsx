@@ -17,7 +17,7 @@ const WRAPPER_CLASSES: Record<SearchVariant, string> = {
 };
 
 const BUTTON_CLASSES: Record<SearchVariant, string> = {
-    hero: "",
+    hero: "w-full sm:w-auto",
     footer: "w-full sm:w-auto",
 };
 
@@ -42,7 +42,7 @@ export default function SearchBar({
             onSubmit={(e) => e.preventDefault()}
         >
             {isHero ? (
-                <div className="flex items-center flex-1 bg-white rounded-full py-3 px-6 shadow-sm h-14">
+                <div className="flex items-center w-full sm:flex-1 bg-white rounded-full py-3 px-6 shadow-sm h-14">
                     <div className="flex items-center justify-center text-gray-400 mr-3">
                         <img src="/icons/search-icon.png" className="h-7 w-7 opacity-70" alt="Search" />
                     </div>

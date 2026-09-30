@@ -17,10 +17,10 @@ export default function TestimonialsSection() {
 
                 {/* --- HEADER --- */}
                 <div className="grid items-start gap-8 md:grid-cols-2 md:gap-16 mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-[44px] heading-m text-gray-900 max-w-md">
+                    <h2 className="text-3xl md:text-[44px] heading-m text-gray-900 max-w-lg">
                         {heading}
                     </h2>
-                    <p className="text-gray-600 body-s md:body-l max-w-xl md:mx-auto text-justify">
+                    <p className="text-gray-600 body-m md:body-l max-w-xl md:mx-auto text-justify">
                         {description}
                     </p>
                 </div>
@@ -41,7 +41,7 @@ export default function TestimonialsSection() {
                             <h3 className="heading-xs text-gray-900">{testimonial.name}</h3>
                             <p className="label-s text-persian-blue mb-4">{testimonial.role}</p>
 
-                            <p className="body-l text-gray-500 leading-relaxed">{testimonial.quote}</p>
+                            <p className="body-m md:body-l text-gray-500 leading-relaxed">{testimonial.quote}</p>
                         </article>
                     ))}
                 </div>
