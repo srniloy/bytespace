@@ -15,7 +15,6 @@ export default function TestimonialsSection() {
 
             <div className="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-8">
 
-                {/* --- HEADER --- */}
                 <div className="grid items-start gap-8 md:grid-cols-2 md:gap-16 mb-12 md:mb-16">
                     <h2 className="text-3xl md:text-[44px] heading-m text-gray-900 max-w-lg">
                         {heading}
@@ -25,7 +24,6 @@ export default function TestimonialsSection() {
                     </p>
                 </div>
 
-                {/* --- TESTIMONIAL CARDS --- */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
                     {testimonials.map((testimonial) => (
                         <article

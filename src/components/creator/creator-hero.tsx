@@ -20,7 +20,6 @@ export default function CreatorHero({ creator }: CreatorHeroProps) {
         >
             <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8">
 
-                {/* --- AVATAR + NAME ROW --- */}
                 <div className="flex flex-col sm:flex-row items-center gap-5">
                     <img
                         src={creator.avatar.src}
@@ -39,14 +38,12 @@ export default function CreatorHero({ creator }: CreatorHeroProps) {
                     </div>
                 </div>
 
-                {/* --- BIO --- */}
                 <div className="mt-12 space-y-3 text-center sm:text-left">
                     {creator.bio.map((paragraph) => (
                         <p key={paragraph} className="body-l text-white">{paragraph}</p>
                     ))}
                 </div>
 
-                {/* --- STATS + FOLLOW --- */}
                 <div className="mt-10 flex flex-wrap items-center justify-between gap-4">
                     <div className="flex flex-wrap gap-4 md:gap-6">
                         {stats.map((stat) => (
