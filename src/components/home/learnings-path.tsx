@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { learningPathsData } from '../../data/learning-paths';
 
 export default function LearningPathsSection() {
@@ -17,20 +16,18 @@ export default function LearningPathsSection() {
 
                 <div className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
                     {learningPathsData.paths.map((path) => (
-                        <motion.div
+                        <div
                             key={path.id}
-                            whileHover={{ y: -5, boxShadow: "0px 10px 15px -3px rgba(0, 0, 0, 0.05)" }}
-                            transition={{ duration: 0.2 }}
-                            className="flex flex-col items-center justify-center bg-white border border-gray-200 rounded-3xl p-4 md:p-6 cursor-pointer group hover:border-gray-300 transition-colors duration-200"
+                            className="flex flex-col items-center justify-center bg-white border border-gray-200 rounded-3xl p-4 md:p-6 cursor-pointer group hover:border-gray-300 hover:-translate-y-[5px] hover:shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.05)] transition-all duration-200"
                         >
                             <div className="w-14 h-14 rounded-full bg-accent-lime flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                                <img src={path.iconSrc} alt={path.iconAlt} />
+                                <img src={path.iconSrc} alt={path.iconAlt} loading="lazy" decoding="async" />
                             </div>
 
                             <span className="label-l text-gray-800 text-center">
                                 {path.label}
                             </span>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
 

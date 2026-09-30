@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import CourseCard from '../courses/course-card';
 import Container from '../shared/container';
 import SectionHeading from '../shared/section-heading';
@@ -32,23 +31,17 @@ export default function CourseSection() {
 
                 <div className="w-full flex flex-col items-center mb-16">
                     <div className="flex flex-wrap justify-center gap-3 md:gap-4 w-full">
-                        <AnimatePresence>
-                            {displayedCategories.map((category) => (
-                                <motion.button
-                                    key={category.id}
-                                    layout
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    exit={{ opacity: 0, scale: 0.9 }}
-                                    transition={{ duration: 0.2 }}
-                                    onClick={() => setActiveCategory(category.id)}
-                                    className={`px-5 py-2.5 rounded-full label-m transition-colors duration-200 ${activeCategory === category.id ? ACTIVE_CHIP_CLASSES : IDLE_CHIP_CLASSES
-                                        }`}
-                                >
-                                    {category.label}
-                                </motion.button>
-                            ))}
-                        </AnimatePresence>
+                        {displayedCategories.map((category) => (
+                            <button
+                                key={category.id}
+                                type="button"
+                                onClick={() => setActiveCategory(category.id)}
+                                className={`px-5 py-2.5 rounded-full label-m transition-colors duration-200 ${activeCategory === category.id ? ACTIVE_CHIP_CLASSES : IDLE_CHIP_CLASSES
+                                    }`}
+                            >
+                                {category.label}
+                            </button>
+                        ))}
                         {!isExpanded && (
                             <button
                                 onClick={() => setIsExpanded(true)}
