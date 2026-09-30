@@ -5,6 +5,7 @@ import AuthLayout from './layouts/auth-layout';
 
 const HomePage = lazy(() => import('./pages/home-page'));
 const CoursePage = lazy(() => import('./pages/course-page'));
+const CourseDetailsPage = lazy(() => import('./pages/course-details-page'));
 const CreatorPage = lazy(() => import('./pages/creator-page'));
 const LoginPage = lazy(() => import('./pages/login-page'));
 const RegisterPage = lazy(() => import('./pages/register-page'));
@@ -16,6 +17,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/courses" element={<CoursePage />} />
+          <Route path="/courses/:id" element={<CourseDetailsPage />} />
           <Route path="/creators" element={<CreatorPage />} />
         </Route>
 

@@ -5,6 +5,7 @@ export interface CourseCategory {
 }
 
 export interface Course {
+    id: string;
     imageSrc: string;
     lessonCount: number;
     duration: string;
@@ -76,7 +77,7 @@ export const courseCategories: CourseCategory[] = [
     { id: 'cooking', label: 'Cooking', hidden: true },
 ];
 
-export const homeCourses: Course[] = [
+const baseCourses: Omit<Course, 'id'>[] = [
     {
         imageSrc: '/images/course-card-thumbnail-1.jpg',
         lessonCount: 17,
@@ -91,7 +92,7 @@ export const homeCourses: Course[] = [
         extraStudents: 26,
     },
     {
-        imageSrc: "/images/course-card-thumbnail-2.jpg",
+        imageSrc: '/images/course-card-thumbnail-2.jpg',
         lessonCount: 17,
         duration: '2 hours 16 mins',
         commentCount: 59,
@@ -104,7 +105,7 @@ export const homeCourses: Course[] = [
         extraStudents: 26,
     },
     {
-        imageSrc: "/images/course-card-thumbnail-3.jpg",
+        imageSrc: '/images/course-card-thumbnail-3.jpg',
         lessonCount: 17,
         duration: '2 hours 16 mins',
         commentCount: 59,
@@ -117,7 +118,7 @@ export const homeCourses: Course[] = [
         extraStudents: 26,
     },
     {
-        imageSrc: "/images/course-card-thumbnail-4.jpg",
+        imageSrc: '/images/course-card-thumbnail-4.jpg',
         lessonCount: 17,
         duration: '2 hours 16 mins',
         commentCount: 59,
@@ -130,7 +131,7 @@ export const homeCourses: Course[] = [
         extraStudents: 26,
     },
     {
-        imageSrc: "/images/course-card-thumbnail-5.jpg",
+        imageSrc: '/images/course-card-thumbnail-5.jpg',
         lessonCount: 17,
         duration: '2 hours 16 mins',
         commentCount: 59,
@@ -143,7 +144,7 @@ export const homeCourses: Course[] = [
         extraStudents: 26,
     },
     {
-        imageSrc: "/images/course-card-thumbnail-6.jpg",
+        imageSrc: '/images/course-card-thumbnail-6.jpg',
         lessonCount: 17,
         duration: '2 hours 16 mins',
         commentCount: 59,
@@ -156,3 +157,22 @@ export const homeCourses: Course[] = [
         extraStudents: 26,
     },
 ];
+
+const COURSE_COUNT = 45;
+const RUN_LENGTH = 9;
+
+// ascending / descending runs of RUN_LENGTH (one run per page) so every page reads differently:
+// 1..9, 9..1, 1..9, 9..1, 1..9
+const buildCourses = (): Course[] =>
+    Array.from({ length: COURSE_COUNT }, (_, index) => {
+        const run = Math.floor(index / RUN_LENGTH);
+        const step = index % RUN_LENGTH;
+        const slot = run % 2 === 0 ? step : RUN_LENGTH - 1 - step;
+
+        return {
+            ...baseCourses[slot % baseCourses.length],
+            id: `course-${index + 1}`,
+        };
+    });
+
+export const homeCourses: Course[] = buildCourses();
