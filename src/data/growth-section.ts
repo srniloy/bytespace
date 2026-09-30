@@ -14,7 +14,7 @@ export const growthSectionData: GrowthSectionData = {
             { value: '16', label: 'Creators' },
         ],
         image: {
-            src: '/images/hero-section-boy.png',
+            src: '/images/hero-section-boy.webp',
             alt: 'Student learning',
         },
     },
@@ -30,7 +30,7 @@ export const growthSectionData: GrowthSectionData = {
             'Build a Community',
         ],
         image: {
-            src: '/images/growth-section-girl.png',
+            src: '/images/growth-section-girl.webp',
             alt: 'Course creator',
         },
     },
@@ -52,7 +52,7 @@ export const growthSectionData: GrowthSectionData = {
 
 export const singleCourse: Course = {
     id: 'course-1',
-    imageSrc: '/images/course-card-thumbnail-1.jpg',
+    imageSrc: '/images/course-card-thumbnail-1.webp',
     lessonCount: 17,
     duration: '2 hours 16 mins',
     title: 'Learn Figma from Basic',
@@ -60,6 +60,6 @@ export const singleCourse: Course = {
     rating: 4.5,
     level: 'Beginner',
     price: 25,
-    avatars: ['/images/user-image-1.png', '/images/user-image-2.png', '/images/user-image-3.png'],
+    avatars: ['/images/user-image-1.webp', '/images/user-image-2.webp', '/images/user-image-3.webp'],
     extraStudents: 26,
 }

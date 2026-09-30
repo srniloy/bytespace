@@ -4,7 +4,7 @@ export type { FooterData, FooterLink, FooterLinkColumn } from '../types/footer';
 
 export const footerData: FooterData = {
     logo: {
-        src: '/images/footer-logo.png',
+        src: '/images/footer-logo.webp',
         alt: 'ByteSpace',
         href: '/',
         ariaLabel: 'ByteSpace home',

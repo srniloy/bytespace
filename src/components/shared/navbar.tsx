@@ -1,8 +1,10 @@
-import { useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { authLinks, centerLinks } from '../../data/nav';
 import { brandData } from '../../data/brand';
-import MobileMenu from './mobile-menu';
+
+// drawer is invisible until opened — splitting it costs nothing visually
+const MobileMenu = lazy(() => import('./mobile-menu'));
 
 const { logo, cart } = brandData;
 
@@ -85,7 +87,9 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} links={centerLinks} authLinks={authLinks} />
+            <Suspense fallback={null}>
+                <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} links={centerLinks} authLinks={authLinks} />
+            </Suspense>
         </>
     );
 }

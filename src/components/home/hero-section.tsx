@@ -35,7 +35,11 @@ export default function HeroSection() {
                     <img
                         src={personImage.src}
                         alt={personImage.alt}
-                        className="relative z-10"
+                        fetchPriority="high"
+                        decoding="async"
+                        width={676}
+                        height={515}
+                        className="relative z-10 h-auto w-full max-w-169"
                     />
 
 

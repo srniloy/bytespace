@@ -4,7 +4,7 @@ export type { BrandCart, BrandData, BrandLogo } from '../types/brand';
 
 export const brandData: BrandData = {
     logo: {
-        src: '/images/nav-logo.png',
+        src: '/images/nav-logo.webp',
         alt: 'ByteSpace',
         href: '/',
         ariaLabel: 'ByteSpace home',
