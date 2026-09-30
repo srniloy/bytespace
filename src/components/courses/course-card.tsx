@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { memo, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { courseCardLabels } from '../../data/courses';
 import type { Course } from '../../types/courses';
@@ -9,7 +9,7 @@ export interface CourseCardProps {
     course: Course;
 }
 
-export default function CourseCard({ course }: CourseCardProps) {
+export default memo(function CourseCard({ course }: CourseCardProps) {
     const {
         imageSrc,
         lessonCount,
@@ -23,17 +23,18 @@ export default function CourseCard({ course }: CourseCardProps) {
         avatars,
         extraStudents,
     } = course;
-    const pills = [
-        `${lessonCount}${courseCardLabels.lessonsSuffix}`,
-        duration,
-        commentCount && `${commentCount}${courseCardLabels.commentsSuffix}`,
-    ];
+    const pills = useMemo(
+        () => [
+            `${lessonCount}${courseCardLabels.lessonsSuffix}`,
+            duration,
+            commentCount && `${commentCount}${courseCardLabels.commentsSuffix}`,
+        ],
+        [lessonCount, duration, commentCount],
+    );
 
     return (
-        <motion.div
-            whileHover={{ y: -4, boxShadow: '0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
-            transition={{ duration: 0.2, ease: 'easeOut' }}
-            className="group relative w-full bg-white rounded-3xl p-3 border border-gray-100 shadow-sm flex flex-col font-sans h-full"
+        <div
+            className="group relative w-full bg-white rounded-3xl p-3 border border-gray-100 shadow-sm flex flex-col font-sans h-full transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_10px_10px_-5px_rgba(0,0,0,0.04)]"
         >
             <Link
                 to={`/courses/${course.id}`}
@@ -46,6 +47,8 @@ export default function CourseCard({ course }: CourseCardProps) {
                 <img
                     src={imageSrc}
                     alt={title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
 
@@ -100,6 +103,6 @@ export default function CourseCard({ course }: CourseCardProps) {
                     {courseCardLabels.priceSuffix}
                 </span>
             </div>
-        </motion.div>
+        </div>
     );
-}
+});

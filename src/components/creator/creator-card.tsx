@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { creatorPageData } from '../../data/creator-page';
 import type { Creator } from '../../types/creator-page';
@@ -17,14 +16,14 @@ export default function CreatorCard({ creator }: CreatorCardProps) {
 
     return (
         <Link to={`/creators/${creator.id}`} className="block h-full cursor-pointer group">
-            <motion.div
-                whileHover={{ y: -4, boxShadow: '0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
-                transition={{ duration: 0.2, ease: 'easeOut' }}
-                className="flex h-full w-full flex-col items-center rounded-3xl border border-gray-100 bg-white p-6 text-center shadow-sm font-sans"
+            <div
+                className="flex h-full w-full flex-col items-center rounded-3xl border border-gray-100 bg-white p-6 text-center shadow-sm font-sans transition-all duration-200 ease-out hover:-translate-y-1 hover:shadow-[0px_20px_25px_-5px_rgba(0,0,0,0.1),0px_10px_10px_-5px_rgba(0,0,0,0.04)]"
             >
                 <img
                     src={creator.avatar.src}
                     alt={creator.avatar.alt}
+                    loading="lazy"
+                    decoding="async"
                     className="size-24 shrink-0 rounded-3xl object-cover"
                 />
 
@@ -45,7 +44,7 @@ export default function CreatorCard({ creator }: CreatorCardProps) {
                 <span className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-accent-lime px-6 py-2.5 label-s text-black transition-colors duration-200 group-hover:brightness-95">
                     {cardLabels.viewLabel}
                 </span>
-            </motion.div>
+            </div>
         </Link>
     );
 }
