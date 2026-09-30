@@ -27,7 +27,7 @@ export const courseDetailsData: CourseDetailsData = {
             students: 199,
         },
         video: {
-            src: '/images/course-details-video-thumbnail.png',
+            src: '/images/course-details-video-thumbnail.webp',
             embedUrl: 'https://www.youtube.com/embed/gjffmgucDSw',
             playLabel: 'Play course video',
         },
@@ -53,7 +53,7 @@ export const courseDetailsData: CourseDetailsData = {
             { icon: 'presentation', label: 'Private Consultation' },
         ],
         creator: {
-            avatar: '/images/user-image-4.png',
+            avatar: '/images/user-image-4.webp',
             name: 'PurePearl Studio',
             role: 'Professional Creator',
             prompt: 'Ready to Dive In? Enroll Now and Start Building Your Digital Future!',
@@ -74,10 +74,10 @@ export const courseDetailsData: CourseDetailsData = {
         ],
         sneakPeakHeading: 'Sneak Peak',
         sneakPeakImages: [
-            { src: '/images/sneak-peak-image-1.jpg', alt: 'Wireframe sketching session' },
-            { src: '/images/sneak-peak-image-2.jpg', alt: 'Design workspace setup' },
-            { src: '/images/sneak-peak-image-3.jpg', alt: 'Course project on laptop' },
-            { src: '/images/sneak-peak-image-4.jpg', alt: 'Mobile app interfaces' },
+            { src: '/images/sneak-peak-image-1.webp', alt: 'Wireframe sketching session' },
+            { src: '/images/sneak-peak-image-2.webp', alt: 'Design workspace setup' },
+            { src: '/images/sneak-peak-image-3.webp', alt: 'Course project on laptop' },
+            { src: '/images/sneak-peak-image-4.webp', alt: 'Mobile app interfaces' },
         ],
         keyPointsHeading: 'Key Points',
         keyPoints: [
@@ -160,7 +160,7 @@ export const courseDetailsData: CourseDetailsData = {
         ],
         items: [
             {
-                avatar: '/images/user-image-4.png',
+                avatar: '/images/user-image-4.webp',
                 name: 'PurePearl Studio',
                 role: 'UI/UX Designer',
                 timeAgo: 'a year ago',
@@ -168,7 +168,7 @@ export const courseDetailsData: CourseDetailsData = {
                 text: 'The course provided me with a comprehensive understanding of digital asset creation. The lessons were in-depth, practical, and immediately applicable to my work. Highly recommended!',
             },
             {
-                avatar: '/images/user-image-1.png',
+                avatar: '/images/user-image-1.webp',
                 name: 'Albert Flores',
                 role: 'UI/UX Designer',
                 timeAgo: 'a year ago',
@@ -176,7 +176,7 @@ export const courseDetailsData: CourseDetailsData = {
                 text: "This course transformed my approach to digital design. The combination of theory, hands-on exercises, and real-world applications made it a truly enriching experience. Excited to implement what I've learned!",
             },
             {
-                avatar: '/images/user-image-2.png',
+                avatar: '/images/user-image-2.webp',
                 name: 'Cody Fisher',
                 role: 'UI/UX Designer',
                 timeAgo: 'a year ago',
@@ -184,7 +184,7 @@ export const courseDetailsData: CourseDetailsData = {
                 text: 'The project showcase and critique module created a collaborative environment where I could showcase my work, receive valuable feedback, and refine my skills. It added a unique and valuable dimension to the learning process.',
             },
             {
-                avatar: '/images/user-image-3.png',
+                avatar: '/images/user-image-3.webp',
                 name: 'Brooklyn Simons',
                 role: 'UI/UX Designer',
                 timeAgo: 'a year ago',

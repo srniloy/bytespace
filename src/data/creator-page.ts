@@ -23,7 +23,7 @@ export const creators: Creator[] = [
         badge: 'Creator',
         role: 'Passionate UI/UX, Web designer',
         avatar: {
-            src: '/images/user-image-1.png',
+            src: '/images/user-image-1.webp',
             alt: 'PurePearl Studio',
         },
         bio: [
@@ -39,7 +39,7 @@ export const creators: Creator[] = [
         badge: 'Creator',
         role: 'Senior Product Designer, Mentor',
         avatar: {
-            src: '/images/user-image-4.png',
+            src: '/images/user-image-4.webp',
             alt: 'Albert Flores',
         },
         bio: [
@@ -55,7 +55,7 @@ export const creators: Creator[] = [
         badge: 'Creator',
         role: 'Motion Designer, Creative Director',
         avatar: {
-            src: '/images/user-image-2.png',
+            src: '/images/user-image-2.webp',
             alt: 'Cody Fisher',
         },
         bio: [
@@ -71,7 +71,7 @@ export const creators: Creator[] = [
         badge: 'Creator',
         role: 'Data Visualization Expert, Educator',
         avatar: {
-            src: '/images/user-image-3.png',
+            src: '/images/user-image-3.webp',
             alt: 'Brooklyn Simons',
         },
         bio: [
@@ -87,7 +87,7 @@ export const creators: Creator[] = [
         badge: 'Creator',
         role: 'Brand Strategist, Illustrator',
         avatar: {
-            src: '/images/user-image-1.png',
+            src: '/images/user-image-1.webp',
             alt: 'Sarah Mitchell',
         },
         bio: [
@@ -103,7 +103,7 @@ export const creators: Creator[] = [
         badge: 'Creator',
         role: 'Frontend Engineer, Educator',
         avatar: {
-            src: '/images/user-image-2.png',
+            src: '/images/user-image-2.webp',
             alt: 'Ralph Edwards',
         },
         bio: [

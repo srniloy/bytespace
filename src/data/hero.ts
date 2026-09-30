@@ -11,7 +11,7 @@ export const heroData: HeroData = {
         buttonLabel: 'Search',
     },
     personImage: {
-        src: '/images/hero-section-boy.png',
+        src: '/images/hero-section-boy.webp',
         alt: 'Student learning',
     },
     floatingCard: {

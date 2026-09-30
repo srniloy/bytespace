@@ -7,12 +7,12 @@ export const happyUserCardData: HappyUserCardData = {
     rating: '4.5',
     reviewCount: '(240)',
     avatars: [
-        '/images/user-image-1.png',
-        '/images/user-image-2.png',
-        '/images/user-image-3.png',
-        '/images/user-image-4.png',
-        '/images/user-image-1.png',
-        '/images/user-image-3.png',
+        '/images/user-image-1.webp',
+        '/images/user-image-2.webp',
+        '/images/user-image-3.webp',
+        '/images/user-image-4.webp',
+        '/images/user-image-1.webp',
+        '/images/user-image-3.webp',
     ],
     badge: '2K+',
 };
