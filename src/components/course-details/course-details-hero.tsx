@@ -25,7 +25,7 @@ export default function CourseDetailsHero({ course }: CourseDetailsHeroProps) {
             <div className="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8">
 
                 {/* --- TITLE ROW --- */}
-                <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:items-start sm:justify-between sm:text-left">
                     <div>
                         <h1 className="text-2xl md:text-3xl heading-s text-white">
                             {course.title}{hero.titleSuffix}
@@ -41,7 +41,7 @@ export default function CourseDetailsHero({ course }: CourseDetailsHeroProps) {
                         </p>
                     </div>
 
-                    <Button variant="lime" size="sm" className="gap-2 self-start">
+                    <Button variant="lime" size="sm" className="gap-2 self-center sm:self-start">
                         <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                             <circle cx="18" cy="5" r="3" />
                             <circle cx="6" cy="12" r="3" />
@@ -54,18 +54,18 @@ export default function CourseDetailsHero({ course }: CourseDetailsHeroProps) {
                 </div>
 
                 {/* --- STAT PILLS --- */}
-                <div className="mt-10 flex flex-wrap gap-4 md:gap-6">
-                    <span className="flex items-center gap-2.5 rounded-full bg-white px-6 py-3 label-m text-gray-900">
+                <div className="mt-10 flex flex-wrap justify-center gap-4 sm:justify-start md:gap-6">
+                    <span className="flex items-center gap-2.5 rounded-full bg-white px-3 sm:px-6 py-3 label-m text-gray-900">
                         <img src="/icons/signal-blue-icon.webp" alt="" className="h-5 w-5" />
                         {stats.level}
                     </span>
 
-                    <span className="flex items-center gap-2.5 rounded-full bg-white px-6 py-3 label-m text-gray-900">
+                    <span className="flex items-center gap-2.5 rounded-full bg-white px-3 sm:px-6 py-3 label-m text-gray-900">
                         <img src="/icons/star-icon.webp" alt="" className="h-5 w-5" />
                         {stats.rating} ({stats.reviews} reviews)
                     </span>
 
-                    <span className="flex items-center gap-2.5 rounded-full bg-white px-6 py-3 label-m text-gray-900">
+                    <span className="flex items-center gap-2.5 rounded-full bg-white px-3 sm:px-6 py-3 label-m text-gray-900">
                         <img src="/icons/users-icon.webp" alt="" className="h-5 w-5" />
                         {stats.students} Students
                     </span>

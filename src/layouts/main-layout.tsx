@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from '../components/shared/navbar';
 import Footer from '../components/shared/footer';
-import PageLoader from '../components/shared/page-loader';
+import RouteSkeleton from '../components/shared/route-skeleton';
 
 interface MainLayoutProps {
     // blue hero pages add their own top spacing
@@ -24,7 +24,7 @@ export default function MainLayout({ inside = false }: MainLayoutProps) {
 
             {/* hero pages manage their own top spacing; other pages clear the fixed navbar */}
             <main id="main-content" className={`flex-1 ${heroPage ? '' : 'pt-30'}`}>
-                <Suspense fallback={<PageLoader />}>
+                <Suspense fallback={<RouteSkeleton />}>
                     <Outlet />
                 </Suspense>
             </main>

@@ -66,7 +66,7 @@ export default function LoginPage() {
                     </div>
                 </form>
 
-                <SocialLogin className="mt-20" />
+                <SocialLogin className="mt-10" />
             </AuthFormCard>
         </AuthScreen>
     );

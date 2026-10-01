@@ -15,11 +15,11 @@ export default function TestimonialsSection() {
 
             <div className="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-8">
 
-                <div className="grid items-start gap-8 md:grid-cols-2 md:gap-16 mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-[44px] heading-m text-gray-900 max-w-lg">
+                <div className="grid items-start gap-8 md:grid-cols-2 md:gap-16 mb-12 md:mb-16 text-center md:text-left">
+                    <h2 className="text-3xl md:text-[44px] heading-m text-gray-900 max-w-lg mx-auto md:mx-0">
                         {heading}
                     </h2>
-                    <p className="text-gray-600 body-m md:body-l max-w-xl md:mx-auto text-justify">
+                    <p className="text-gray-600 body-m md:body-l max-w-xl mx-auto text-center md:text-justify">
                         {description}
                     </p>
                 </div>
@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
                     {testimonials.map((testimonial) => (
                         <article
                             key={testimonial.id}
-                            className="bg-white rounded-3xl p-6 md:p-7 shadow-sm flex flex-col"
+                            className="bg-white rounded-3xl p-6 md:p-7 shadow-sm flex flex-col items-center text-center md:items-start md:text-left"
                         >
                             <img
                                 src={testimonial.avatar}

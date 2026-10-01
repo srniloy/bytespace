@@ -42,8 +42,8 @@ export default function FilterBar({ showCategories = true }: { showCategories?: 
     return (
         <div>
             {/* --- FILTER & SORT PILLS --- */}
-            <div className="flex flex-wrap items-center justify-between gap-4">
-                <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center justify-center sm:justify-between gap-4">
+                <div className="flex flex-wrap items-center justify-center gap-4">
                     {filters.options.map((option) => (
                         <button key={option.id} type="button" className={PILL_CLASSES}>
                             {filterIcons[option.id]}
@@ -60,7 +60,7 @@ export default function FilterBar({ showCategories = true }: { showCategories?: 
 
             {/* --- CATEGORY CHIPS --- */}
             {showCategories && (
-                <div className="mt-9 flex flex-wrap gap-6">
+                <div className="mt-9 flex flex-wrap justify-center sm:justify-start gap-6">
                     {categories.map((category) => (
                         <button
                             key={category.id}

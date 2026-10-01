@@ -45,7 +45,7 @@ export default function CreatorHero({ creator }: CreatorHeroProps) {
                     ))}
                 </div>
 
-                <div className="mt-10 flex flex-wrap items-center justify-between gap-4">
+                <div className="mt-10 flex flex-wrap items-center justify-center sm:justify-between gap-4">
                     <div className="flex flex-wrap gap-4 md:gap-6">
                         {stats.map((stat) => (
                             <span key={stat.count} className="rounded-full bg-white px-6 py-3 label-m text-gray-900">
