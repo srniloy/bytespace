@@ -15,6 +15,7 @@ interface ApiOptions extends RequestInit {
 const DEFAULT_TIMEOUT_MS = 10000;
 
 export async function apiGet<T>(url: string, { timeoutMs = DEFAULT_TIMEOUT_MS, ...init }: ApiOptions = {}): Promise<T> {
+    // slow requests are aborted so the ui never waits forever
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), timeoutMs);
 

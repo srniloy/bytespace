@@ -10,6 +10,7 @@ export default function HomePage() {
     usePageTitle('ByteSpace - Learn from the best creators and grow your skills');
     return (
         <>
+
             <HeroSection />
 
             <TrustedBy />

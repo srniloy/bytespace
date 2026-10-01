@@ -20,7 +20,7 @@ export default function LoginPage() {
     usePageTitle('Sign In');
 
     const form = useValidatedForm(loginSchema, { email: '', password: '' }, () => {
-        // API call to log in the user would go here.
+        // api call to log in the user would go here.
     });
 
     return (

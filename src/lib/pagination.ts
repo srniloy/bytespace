@@ -5,6 +5,7 @@ export interface PageResult<T> {
 }
 
 export function getPageCourses<T>(all: T[], requestedPage: number, perPage: number): PageResult<T> {
+    // bad input falls back to the nearest valid page instead of an empty grid
     const safePerPage = Math.max(1, Math.floor(perPage));
     const totalPages = Math.max(1, Math.ceil(all.length / safePerPage));
     const currentPage =

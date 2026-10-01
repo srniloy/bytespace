@@ -26,7 +26,7 @@ function App() {
           <Route path="/creators/:id" element={<CreatorPage />} />
         </Route>
 
-        <Route element={<MainLayout inside />}>
+        <Route element={<MainLayout inside />}> // layout is used to keep the header and footer for 404 page
           <Route path="*" element={<NotFoundPage />} />
         </Route>
 

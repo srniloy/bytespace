@@ -5,7 +5,7 @@ import Footer from '../components/shared/footer';
 import PageLoader from '../components/shared/page-loader';
 
 interface MainLayoutProps {
-    /* hero-style pages (blue top section) manage their own top spacing */
+    // blue hero pages add their own top spacing
     inside?: boolean;
 }
 

@@ -10,20 +10,14 @@ import {
 export interface ValidatedForm<FieldName extends string> {
     values: Record<FieldName, string>;
     errors: FormErrors<FieldName>;
-    /** Error to display: only after the field was touched or the form submitted. */
+    // show only after touch or submit, never while typing
     visibleError: (name: FieldName) => string | undefined;
     handleChange: (name: FieldName, value: string) => void;
     handleBlur: (name: FieldName) => void;
     handleSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
 }
 
-/**
- * Schema-driven form state. UX contract:
- * - Typing never shows errors (no shouting while the user types).
- * - Blur validates that field (immediate, contextual feedback).
- * - Submit validates everything and reveals all errors at once.
- * - Fixing a shown error clears it live.
- */
+// typing stays silent, blur checks one field, submit checks all
 export function useValidatedForm<FieldName extends string>(
     schema: FormSchema<FieldName>,
     initialValues: Record<FieldName, string>,
@@ -37,7 +31,7 @@ export function useValidatedForm<FieldName extends string>(
     const handleChange = useCallback(
         (name: FieldName, value: string) => {
             setValues((previous) => ({ ...previous, [name]: value }));
-            // Re-validate live only once an error is already visible for this field.
+            // re-check live only while an error is already showing
             if (touched[name] || submitted) {
                 const error = validateField(schema[name], value);
                 setErrors((previous) => {
