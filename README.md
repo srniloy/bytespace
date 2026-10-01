@@ -8,7 +8,7 @@ Course Details, Login/Sign-up (bonus scope, visual), and a 404 page.
 
 ## Stack & decisions
 
-React 19 + TypeScript + Vite 8 + Tailwind CSS v4 + React Router 7. Deployed on Vercel.
+<img src="public/doc-images/tech-stack.png" alt="ByteSpace tech stack: React 19, TypeScript, Vite 8, Tailwind CSS v4, React Router 7, deployed on Vercel" width="720" />
 
 **Why Vite and not Next.js:** this assessment is a static, content-driven landing with no
 server data requirements, so Vite gives the fastest build/preview loop. The code is
