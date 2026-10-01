@@ -7,9 +7,7 @@ interface AuthScreenProps {
     showcase: AuthShowcaseData;
 }
 
-// full-bleed blue grid shell shared by the login and register pages;
-// content is capped at the 1440 design width so the showcase/card gap stays
-// proportional on wide screens
+// shared blue background for login and register
 export default function AuthScreen({ children, showcase }: AuthScreenProps) {
     return (
         <div

@@ -42,7 +42,7 @@ export default memo(function CourseCard({ course }: CourseCardProps) {
                 className="absolute inset-0 z-[1] rounded-3xl cursor-pointer"
             />
 
-            {/* --- 1. IMAGE & OVERLAY PILLS --- */}
+
             <div className="relative w-full aspect-16/10 rounded-2xl overflow-hidden mb-4 shrink-0">
                 <img
                     src={imageSrc}
@@ -68,6 +68,7 @@ export default memo(function CourseCard({ course }: CourseCardProps) {
                     </h3>
                     <p className="body-xs text-gray-500">
                         {courseCardLabels.creatorPrefix}{' '}
+                        {/* card link sits above the media but below the creator link */}
                         <Link
                             to={getCreatorLink(creator)}
                             className="relative z-10 text-persian-blue hover:underline"

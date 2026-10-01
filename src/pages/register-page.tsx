@@ -20,7 +20,7 @@ export default function RegisterPage() {
     usePageTitle('Sign Up');
 
     const form = useValidatedForm(registerSchema, { fullName: '', email: '', password: '' }, () => {
-        // API call to register the user would go here.
+        // api call to register the user would go here.
     });
 
     return (

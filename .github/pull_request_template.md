@@ -19,7 +19,7 @@
 ## Checks
 
 - [ ] `npm run lint` clean
-- [ ] `npm test` green (23 tests)
+- [ ] `npm test` green (45 tests)
 - [ ] `npm run test:e2e` green (5 Chromium specs)
 - [ ] No visual change (or screenshots prove the intended change)
 - [ ] No secrets, phone numbers, or tracking IDs committed

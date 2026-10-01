@@ -1,4 +1,5 @@
-
+// a rule returns an error message, or nothing when the value passes
+// first failing rule wins so each field shows one clear message
 export type ValidationRule = (value: string) => string | undefined;
 
 export interface FieldSchema {
