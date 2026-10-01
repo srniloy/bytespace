@@ -4,11 +4,24 @@ import AuthFormCard from '../components/auth/auth-form-card';
 import SocialLogin from '../components/auth/social-login';
 import FormField from '../components/shared/form-field';
 import { authData } from '../data/auth';
+import { required, validEmail, type FormSchema } from '../lib/validation';
+import { useValidatedForm } from '../hooks/useValidatedForm';
 import usePageTitle from '../hooks/use-page-title';
 import Button from '../components/shared/button';
 
+type LoginField = 'email' | 'password';
+
+const loginSchema: FormSchema<LoginField> = {
+    email: { label: 'Email', rules: [required('Email'), validEmail()] },
+    password: { label: 'Password', rules: [required('Password')] },
+};
+
 export default function LoginPage() {
     usePageTitle('Sign In');
+
+    const form = useValidatedForm(loginSchema, { email: '', password: '' }, () => {
+        // API call to log in the user would go here.
+    });
 
     return (
         <AuthScreen showcase={authData.signIn}>
@@ -24,9 +37,29 @@ export default function LoginPage() {
                     </p>
                 }
             >
-                <form className="flex flex-col gap-5" onSubmit={(event) => event.preventDefault()}>
-                    <FormField label="Email" name="email" type="email" placeholder="designer@example.com" autoComplete="email" />
-                    <FormField label="Password" name="password" type="password" placeholder="••••••••" autoComplete="current-password" />
+                <form className="flex flex-col gap-5" onSubmit={form.handleSubmit} noValidate>
+                    <FormField
+                        label="Email"
+                        name="email"
+                        type="email"
+                        placeholder="designer@example.com"
+                        autoComplete="email"
+                        value={form.values.email}
+                        onChange={(value) => form.handleChange('email', value)}
+                        onBlur={() => form.handleBlur('email')}
+                        error={form.visibleError('email')}
+                    />
+                    <FormField
+                        label="Password"
+                        name="password"
+                        type="password"
+                        placeholder="••••••••"
+                        autoComplete="current-password"
+                        value={form.values.password}
+                        onChange={(value) => form.handleChange('password', value)}
+                        onBlur={() => form.handleBlur('password')}
+                        error={form.visibleError('password')}
+                    />
 
                     <div className="mt-4 flex justify-end">
                         <Button variant="lime" size="sm" type="submit">Sign In</Button>
